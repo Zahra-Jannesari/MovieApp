@@ -1,13 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:android="http://schemas.android.com/apk/res/android">
-
     <item android:title="@string/profile_item"
         android:id="@+id/btn_profile"/>
     <item android:title="@string/favorite_item"
         android:id="@+id/btn_favorite"/>
     <item android:title="@string/coming_soon_item"
         android:id="@+id/btn_comeSoon"/>
-    <item android:title="@string/home_item"
-        android:id="@+id/btn_home"/>
 </menu>
