@@ -34,7 +34,6 @@ class HomeFragment : Fragment() {
     }
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
-        val item_profile=item.itemId
         when(item.itemId){
             R.id.btn_profile->findNavController().navigate(R.id.action_homeFragment_to_profileFragment)
             R.id.btn_favorite->findNavController().navigate(R.id.action_homeFragment_to_favoriteFragment)
