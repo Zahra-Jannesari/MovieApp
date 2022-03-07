@@ -19,6 +19,9 @@
         <action
             android:id="@+id/action_homeFragment_to_favoriteFragment"
             app:destination="@id/favoriteFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_registerFormFragment"
+            app:destination="@id/registerFormFragment" />
     </fragment>
     <fragment
         android:id="@+id/comingSoonFragment"
@@ -35,4 +38,13 @@
         android:name="com.zarisa.netflixclone.ProfileFragment"
         android:label="fragment_profile"
         tools:layout="@layout/fragment_profile" />
+    <fragment
+        android:id="@+id/registerFormFragment"
+        android:name="com.zarisa.netflixclone.RegisterFormFragment"
+        android:label="fragment_register_form"
+        tools:layout="@layout/fragment_register_form" >
+        <action
+            android:id="@+id/action_registerFormFragment_to_profileFragment"
+            app:destination="@id/profileFragment" />
+    </fragment>
 </navigation>
