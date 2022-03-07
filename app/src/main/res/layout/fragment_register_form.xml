@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".RegisterFormFragment">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/RegisterForm"
+                android:background="@drawable/text_view_background"
+                android:layout_margin="8dp"
+                android:textColor="@color/textColor"
+                android:padding="5dp"/>
+
+
+            <EditText
+                android:id="@+id/textField_FullName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/name_family"
+                android:minHeight="48dp"
+                android:paddingHorizontal="16dp"
+                android:layout_margin="8dp"
+                app:boxStrokeWidth="0dp"
+                app:boxStrokeWidthFocused="0dp"
+
+                android:background="@drawable/edit_text_editable"
+                />
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                app:boxStrokeWidth="0dp"
+                app:boxStrokeWidthFocused="0dp"
+                android:minHeight="48dp"
+                android:paddingHorizontal="16dp"
+                android:id="@+id/textField_email"
+                android:hint="@string/email"
+                android:background="@drawable/edit_text_editable"
+                android:inputType="textEmailAddress"/>
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                app:boxStrokeWidth="0dp"
+                app:boxStrokeWidthFocused="0dp"
+                android:minHeight="48dp"
+                android:paddingHorizontal="16dp"
+                android:id="@+id/textField_username"
+                android:hint="Username"
+                android:background="@drawable/edit_text_editable"/>
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                app:boxStrokeWidth="0dp"
+                app:boxStrokeWidthFocused="0dp"
+                android:minHeight="48dp"
+                android:paddingHorizontal="16dp"
+                android:id="@+id/textField_phone"
+                android:hint="Phone"
+                android:background="@drawable/edit_text_editable"/>
+
+            <Button
+                android:id="@+id/button_register"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/Register"
+                android:layout_margin="8dp"/>
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>
