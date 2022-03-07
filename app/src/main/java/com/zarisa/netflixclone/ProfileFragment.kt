@@ -1,5 +1,6 @@
 package com.zarisa.netflixclone
 
+import android.content.SharedPreferences
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
@@ -10,7 +11,7 @@ import androidx.appcompat.app.AppCompatActivity
 
 class ProfileFragment : Fragment() {
 
-
+    private var sharedPreferences: SharedPreferences? = null
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 

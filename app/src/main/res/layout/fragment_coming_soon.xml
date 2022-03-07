@@ -51,6 +51,7 @@
                     app:layout_constraintVertical_bias="0.0" />
 
                 <ImageButton
+                    android:id="@+id/btn_share1"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="106dp"
@@ -113,6 +114,7 @@
                     app:layout_constraintVertical_bias="0.0" />
 
                 <ImageButton
+                    android:id="@+id/btn_share2"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="106dp"
@@ -176,6 +178,7 @@
                     app:layout_constraintVertical_bias="0.0" />
 
                 <ImageButton
+                    android:id="@+id/btn_share3"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="106dp"
