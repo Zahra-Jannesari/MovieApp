@@ -1,14 +1,112 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".ProfileFragment">
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Profile"
+                android:background="@drawable/text_view_background"
+                android:layout_margin="8dp"
+                android:textColor="@color/textColor"
+                android:padding="8dp"
+                android:paddingHorizontal="12dp"
+                android:layout_marginHorizontal="8dp"/>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp">
+
+                <TextView
+                    android:id="@+id/textView_fullname"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/light_background"
+                    android:minHeight="48dp"
+                    android:gravity="center|start"
+                    android:paddingHorizontal="12dp"
+                    android:textStyle="bold"
+                    android:textSize="7pt"/>
+            </androidx.cardview.widget.CardView>
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp">
+
+                <TextView
+                    android:id="@+id/textView_email"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/light_background"
+                    android:minHeight="48dp"
+                    android:gravity="center|start"
+                    android:paddingHorizontal="12dp"
+                    android:textStyle="bold"
+                    android:textSize="7pt"/>
+            </androidx.cardview.widget.CardView>
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp">
+
+                <TextView
+                    android:id="@+id/textView_username"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/light_background"
+                    android:minHeight="48dp"
+                    android:gravity="center|start"
+                    android:paddingHorizontal="12dp"
+                    android:textStyle="bold"
+                    android:textSize="7pt"/>
+            </androidx.cardview.widget.CardView>
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp">
+
+                <TextView
+                    android:id="@+id/textView_phone"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/light_background"
+                    android:minHeight="48dp"
+                    android:gravity="center|start"
+                    android:paddingHorizontal="12dp"
+                    android:textStyle="bold"
+                    android:textSize="7pt"/>
+            </androidx.cardview.widget.CardView>
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"/>
+
+            <Button
+                android:id="@+id/button_changeInformation"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="CHANGE INFORMATION"
+                android:layout_margin="8dp"/>
+            <Button
+                android:id="@+id/button_EnterNewUser"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="LOG OUT"
+                android:layout_margin="8dp"
+                android:backgroundTint="@color/customTheme_light"/>
+        </LinearLayout>
+    </ScrollView>
 
 
-    <TextView
-        android:id="@+id/textView"
-        android:layout_width="315dp"
-        android:layout_height="242dp"
-        android:text="prof" />
-</FrameLayout>
+</LinearLayout>
