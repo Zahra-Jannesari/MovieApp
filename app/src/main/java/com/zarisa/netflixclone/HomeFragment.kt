@@ -73,6 +73,18 @@ class HomeFragment : Fragment() {
             StateOfFavButtons.isBtn33Clicked = !StateOfFavButtons.isBtn33Clicked
             binding.btnFav33.setBackgroundResource(if (StateOfFavButtons.isBtn33Clicked) R.drawable.ic_baseline_favorite_selecte_24 else R.drawable.ic_baseline_favorite_notselect_24)
         }
+        binding.btnFav41.setOnClickListener{
+            StateOfFavButtons.isBtn41Clicked = !StateOfFavButtons.isBtn41Clicked
+            binding.btnFav41.setBackgroundResource(if (StateOfFavButtons.isBtn41Clicked) R.drawable.ic_baseline_favorite_selecte_24 else R.drawable.ic_baseline_favorite_notselect_24)
+        }
+        binding.btnFav42.setOnClickListener{
+            StateOfFavButtons.isBtn42Clicked = !StateOfFavButtons.isBtn42Clicked
+            binding.btnFav42.setBackgroundResource(if (StateOfFavButtons.isBtn42Clicked) R.drawable.ic_baseline_favorite_selecte_24 else R.drawable.ic_baseline_favorite_notselect_24)
+        }
+        binding.btnFav43.setOnClickListener{
+            StateOfFavButtons.isBtn43Clicked = !StateOfFavButtons.isBtn43Clicked
+            binding.btnFav43.setBackgroundResource(if (StateOfFavButtons.isBtn43Clicked) R.drawable.ic_baseline_favorite_selecte_24 else R.drawable.ic_baseline_favorite_notselect_24)
+        }
     }
 
 
