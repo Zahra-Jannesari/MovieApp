@@ -29,7 +29,7 @@ class HomeFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         sharedPrefInfo = this.activity?.getSharedPreferences("Information", Context.MODE_PRIVATE)
-        (activity as AppCompatActivity).supportActionBar?.title = "NetflixClone"
+        (activity as AppCompatActivity).supportActionBar?.title = "FILMOLOGY"
         registerState=sharedPrefInfo?.getBoolean(isRegistered,false)
         favBtnsSetStateAndOnClick()
     }
