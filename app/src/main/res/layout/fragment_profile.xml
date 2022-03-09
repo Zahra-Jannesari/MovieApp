@@ -63,7 +63,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="8dp"
-                android:visibility="invisible"
+                android:visibility="gone"
                 android:id="@+id/card_username"
                 app:cardCornerRadius="5dp">
 
@@ -83,7 +83,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="8dp"
-                android:visibility="invisible"
+                android:visibility="gone"
                 android:id="@+id/card_phone"
                 app:cardCornerRadius="5dp">
 
