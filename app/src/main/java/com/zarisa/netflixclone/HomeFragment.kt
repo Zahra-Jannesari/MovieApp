@@ -4,6 +4,7 @@ import android.content.Context
 import android.content.SharedPreferences
 import android.os.Bundle
 import android.view.*
+import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
@@ -22,6 +23,7 @@ class HomeFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         binding= FragmentHomeBinding.inflate(layoutInflater, container, false)
+        favBtnsSetStateAndOnClick()
         return binding.root
     }
 
@@ -30,14 +32,29 @@ class HomeFragment : Fragment() {
         sharedPrefInfo = this.activity?.getSharedPreferences("Information", Context.MODE_PRIVATE)
         (activity as AppCompatActivity).supportActionBar?.title = "NetflixClone"
         registerState=sharedPrefInfo?.getBoolean(isRegistered,false)
-        favBtnsSetOnClickListeners()
+        favBtnsSetStateAndOnClick()
     }
 
 
-    private fun favBtnsSetOnClickListeners() {
+    private fun favBtnsSetStateAndOnClick() {
+        binding.btnFav11.setBackgroundResource(if (StateOfFavButtons.isBtn11Clicked) R.drawable.ic_baseline_favorite_selecte_24 else R.drawable.ic_baseline_favorite_notselect_24)
+        binding.btnFav12.setBackgroundResource(if (StateOfFavButtons.isBtn12Clicked) R.drawable.ic_baseline_favorite_selecte_24 else R.drawable.ic_baseline_favorite_notselect_24)
+        binding.btnFav13.setBackgroundResource(if (StateOfFavButtons.isBtn13Clicked) R.drawable.ic_baseline_favorite_selecte_24 else R.drawable.ic_baseline_favorite_notselect_24)
+        binding.btnFav21.setBackgroundResource(if (StateOfFavButtons.isBtn21Clicked) R.drawable.ic_baseline_favorite_selecte_24 else R.drawable.ic_baseline_favorite_notselect_24)
+        binding.btnFav22.setBackgroundResource(if (StateOfFavButtons.isBtn22Clicked) R.drawable.ic_baseline_favorite_selecte_24 else R.drawable.ic_baseline_favorite_notselect_24)
+        binding.btnFav23.setBackgroundResource(if (StateOfFavButtons.isBtn23Clicked) R.drawable.ic_baseline_favorite_selecte_24 else R.drawable.ic_baseline_favorite_notselect_24)
+        binding.btnFav31.setBackgroundResource(if (StateOfFavButtons.isBtn31Clicked) R.drawable.ic_baseline_favorite_selecte_24 else R.drawable.ic_baseline_favorite_notselect_24)
+        binding.btnFav32.setBackgroundResource(if (StateOfFavButtons.isBtn32Clicked) R.drawable.ic_baseline_favorite_selecte_24 else R.drawable.ic_baseline_favorite_notselect_24)
+        binding.btnFav33.setBackgroundResource(if (StateOfFavButtons.isBtn33Clicked) R.drawable.ic_baseline_favorite_selecte_24 else R.drawable.ic_baseline_favorite_notselect_24)
+        binding.btnFav41.setBackgroundResource(if (StateOfFavButtons.isBtn41Clicked) R.drawable.ic_baseline_favorite_selecte_24 else R.drawable.ic_baseline_favorite_notselect_24)
+        binding.btnFav42.setBackgroundResource(if (StateOfFavButtons.isBtn42Clicked) R.drawable.ic_baseline_favorite_selecte_24 else R.drawable.ic_baseline_favorite_notselect_24)
+        binding.btnFav43.setBackgroundResource(if (StateOfFavButtons.isBtn43Clicked) R.drawable.ic_baseline_favorite_selecte_24 else R.drawable.ic_baseline_favorite_notselect_24)
         binding.btnFav11.setOnClickListener{
+            if (registerState==true) {
                 StateOfFavButtons.isBtn11Clicked = !StateOfFavButtons.isBtn11Clicked
                 binding.btnFav11.setBackgroundResource(if (StateOfFavButtons.isBtn11Clicked) R.drawable.ic_baseline_favorite_selecte_24 else R.drawable.ic_baseline_favorite_notselect_24)
+            }
+            else notRegisterToast()
         }
         binding.btnFav12.setOnClickListener{
             StateOfFavButtons.isBtn12Clicked = !StateOfFavButtons.isBtn12Clicked
@@ -87,6 +104,9 @@ class HomeFragment : Fragment() {
         }
     }
 
+    private fun notRegisterToast(){
+        Toast.makeText(activity,"You Have not registered yet!",Toast.LENGTH_SHORT).show()
+    }
 
     override fun onCreateOptionsMenu(menu: Menu, inflater: MenuInflater) {
         inflater.inflate(R.menu.option_menu,menu)
