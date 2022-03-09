@@ -21,9 +21,8 @@ class HomeFragment : Fragment() {
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
+    ): View {
         binding= FragmentHomeBinding.inflate(layoutInflater, container, false)
-        favBtnsSetStateAndOnClick()
         return binding.root
     }
 
@@ -57,50 +56,84 @@ class HomeFragment : Fragment() {
             else notRegisterToast()
         }
         binding.btnFav12.setOnClickListener{
+            if (registerState==true) {
             StateOfFavButtons.isBtn12Clicked = !StateOfFavButtons.isBtn12Clicked
             binding.btnFav12.setBackgroundResource(if (StateOfFavButtons.isBtn12Clicked) R.drawable.ic_baseline_favorite_selecte_24 else R.drawable.ic_baseline_favorite_notselect_24)
+            }
+            else notRegisterToast()
         }
         binding.btnFav13.setOnClickListener{
+            if (registerState==true) {
             StateOfFavButtons.isBtn13Clicked = !StateOfFavButtons.isBtn13Clicked
             binding.btnFav13.setBackgroundResource(if (StateOfFavButtons.isBtn13Clicked) R.drawable.ic_baseline_favorite_selecte_24 else R.drawable.ic_baseline_favorite_notselect_24)
+            }
+            else notRegisterToast()
         }
 
         binding.btnFav21.setOnClickListener{
+            if (registerState==true) {
             StateOfFavButtons.isBtn21Clicked = !StateOfFavButtons.isBtn21Clicked
             binding.btnFav21.setBackgroundResource(if (StateOfFavButtons.isBtn21Clicked) R.drawable.ic_baseline_favorite_selecte_24 else R.drawable.ic_baseline_favorite_notselect_24)
+            }
+            else notRegisterToast()
         }
         binding.btnFav22.setOnClickListener{
+            if (registerState==true) {
             StateOfFavButtons.isBtn22Clicked = !StateOfFavButtons.isBtn22Clicked
             binding.btnFav22.setBackgroundResource(if (StateOfFavButtons.isBtn22Clicked) R.drawable.ic_baseline_favorite_selecte_24 else R.drawable.ic_baseline_favorite_notselect_24)
+            }
+            else notRegisterToast()
         }
         binding.btnFav23.setOnClickListener{
+            if (registerState==true) {
             StateOfFavButtons.isBtn23Clicked = !StateOfFavButtons.isBtn23Clicked
             binding.btnFav23.setBackgroundResource(if (StateOfFavButtons.isBtn23Clicked) R.drawable.ic_baseline_favorite_selecte_24 else R.drawable.ic_baseline_favorite_notselect_24)
+            }
+            else notRegisterToast()
         }
 
         binding.btnFav31.setOnClickListener{
+            if (registerState==true) {
             StateOfFavButtons.isBtn31Clicked = !StateOfFavButtons.isBtn31Clicked
             binding.btnFav31.setBackgroundResource(if (StateOfFavButtons.isBtn31Clicked) R.drawable.ic_baseline_favorite_selecte_24 else R.drawable.ic_baseline_favorite_notselect_24)
+            }
+            else notRegisterToast()
         }
         binding.btnFav32.setOnClickListener{
+            if (registerState==true) {
             StateOfFavButtons.isBtn32Clicked = !StateOfFavButtons.isBtn32Clicked
             binding.btnFav32.setBackgroundResource(if (StateOfFavButtons.isBtn32Clicked) R.drawable.ic_baseline_favorite_selecte_24 else R.drawable.ic_baseline_favorite_notselect_24)
+            }
+            else notRegisterToast()
         }
         binding.btnFav33.setOnClickListener{
+            if (registerState==true) {
             StateOfFavButtons.isBtn33Clicked = !StateOfFavButtons.isBtn33Clicked
             binding.btnFav33.setBackgroundResource(if (StateOfFavButtons.isBtn33Clicked) R.drawable.ic_baseline_favorite_selecte_24 else R.drawable.ic_baseline_favorite_notselect_24)
+            }
+            else notRegisterToast()
         }
+
         binding.btnFav41.setOnClickListener{
+            if (registerState==true) {
             StateOfFavButtons.isBtn41Clicked = !StateOfFavButtons.isBtn41Clicked
             binding.btnFav41.setBackgroundResource(if (StateOfFavButtons.isBtn41Clicked) R.drawable.ic_baseline_favorite_selecte_24 else R.drawable.ic_baseline_favorite_notselect_24)
+            }
+            else notRegisterToast()
         }
         binding.btnFav42.setOnClickListener{
+            if (registerState==true) {
             StateOfFavButtons.isBtn42Clicked = !StateOfFavButtons.isBtn42Clicked
             binding.btnFav42.setBackgroundResource(if (StateOfFavButtons.isBtn42Clicked) R.drawable.ic_baseline_favorite_selecte_24 else R.drawable.ic_baseline_favorite_notselect_24)
+            }
+            else notRegisterToast()
         }
         binding.btnFav43.setOnClickListener{
+            if (registerState==true) {
             StateOfFavButtons.isBtn43Clicked = !StateOfFavButtons.isBtn43Clicked
             binding.btnFav43.setBackgroundResource(if (StateOfFavButtons.isBtn43Clicked) R.drawable.ic_baseline_favorite_selecte_24 else R.drawable.ic_baseline_favorite_notselect_24)
+            }
+            else notRegisterToast()
         }
     }
 
