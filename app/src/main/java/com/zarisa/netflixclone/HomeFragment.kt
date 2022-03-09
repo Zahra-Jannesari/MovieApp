@@ -13,6 +13,7 @@ import com.zarisa.netflixclone.databinding.FragmentHomeBinding
 class HomeFragment : Fragment() {
     lateinit var binding: FragmentHomeBinding
     private var sharedPrefInfo: SharedPreferences? = null
+    lateinit var shareBtnState:SharedPreferences
     private var registerState:Boolean?=false
     override fun onCreate(savedInstanceState: Bundle?) {
         setHasOptionsMenu(true)
@@ -29,14 +30,35 @@ class HomeFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         sharedPrefInfo = this.activity?.getSharedPreferences("Information", Context.MODE_PRIVATE)
+        shareBtnState=this.requireActivity().getSharedPreferences("btnsState",Context.MODE_PRIVATE)
         (activity as AppCompatActivity).supportActionBar?.title = "FILMOLOGY"
         registerState=sharedPrefInfo?.getBoolean(isRegistered,false)
+
+//        val editorBtns = shareBtnState.edit()
+//        editorBtns.putBoolean("11",false)
+//        editorBtns.apply()
         favBtnsSetStateAndOnClick()
     }
 
 
     private fun favBtnsSetStateAndOnClick() {
-        binding.btnFav11.setBackgroundResource(if (StateOfFavButtons.isBtn11Clicked) R.drawable.ic_baseline_favorite_selecte_24 else R.drawable.ic_baseline_favorite_notselect_24)
+        val editorBtns = shareBtnState.edit()
+        var is11Clicked=shareBtnState.getBoolean("11",false)
+        var is12Clicked=shareBtnState.getBoolean("12",false)
+        var is13Clicked=shareBtnState.getBoolean("13",false)
+
+        var is21Clicked=shareBtnState.getBoolean("21",false)
+        var is22Clicked=shareBtnState.getBoolean("22",false)
+        var is23Clicked=shareBtnState.getBoolean("23",false)
+
+        var is31Clicked=shareBtnState.getBoolean("31",false)
+        var is32Clicked=shareBtnState.getBoolean("32",false)
+        var is33Clicked=shareBtnState.getBoolean("33",false)
+
+        var is41Clicked=shareBtnState.getBoolean("41",false)
+        var is42Clicked=shareBtnState.getBoolean("42",false)
+        var is43Clicked=shareBtnState.getBoolean("43",false)
+        binding.btnFav11.setBackgroundResource(if (is11Clicked) R.drawable.ic_baseline_favorite_selecte_24 else R.drawable.ic_baseline_favorite_notselect_24)
         binding.btnFav12.setBackgroundResource(if (StateOfFavButtons.isBtn12Clicked) R.drawable.ic_baseline_favorite_selecte_24 else R.drawable.ic_baseline_favorite_notselect_24)
         binding.btnFav13.setBackgroundResource(if (StateOfFavButtons.isBtn13Clicked) R.drawable.ic_baseline_favorite_selecte_24 else R.drawable.ic_baseline_favorite_notselect_24)
         binding.btnFav21.setBackgroundResource(if (StateOfFavButtons.isBtn21Clicked) R.drawable.ic_baseline_favorite_selecte_24 else R.drawable.ic_baseline_favorite_notselect_24)
@@ -48,12 +70,18 @@ class HomeFragment : Fragment() {
         binding.btnFav41.setBackgroundResource(if (StateOfFavButtons.isBtn41Clicked) R.drawable.ic_baseline_favorite_selecte_24 else R.drawable.ic_baseline_favorite_notselect_24)
         binding.btnFav42.setBackgroundResource(if (StateOfFavButtons.isBtn42Clicked) R.drawable.ic_baseline_favorite_selecte_24 else R.drawable.ic_baseline_favorite_notselect_24)
         binding.btnFav43.setBackgroundResource(if (StateOfFavButtons.isBtn43Clicked) R.drawable.ic_baseline_favorite_selecte_24 else R.drawable.ic_baseline_favorite_notselect_24)
+
         binding.btnFav11.setOnClickListener{
-            if (registerState==true) {
-                StateOfFavButtons.isBtn11Clicked = !StateOfFavButtons.isBtn11Clicked
-                binding.btnFav11.setBackgroundResource(if (StateOfFavButtons.isBtn11Clicked) R.drawable.ic_baseline_favorite_selecte_24 else R.drawable.ic_baseline_favorite_notselect_24)
-            }
-            else notRegisterToast()
+//            if (registerState==true) {
+//                StateOfFavButtons.isBtn11Clicked = !StateOfFavButtons.isBtn11Clicked
+//                binding.btnFav11.setBackgroundResource(if (StateOfFavButtons.isBtn11Clicked) R.drawable.ic_baseline_favorite_selecte_24 else R.drawable.ic_baseline_favorite_notselect_24)
+//            }
+//            else notRegisterToast()
+
+            is11Clicked=!is11Clicked
+            binding.btnFav11.setBackgroundResource(if (is11Clicked) R.drawable.ic_baseline_favorite_selecte_24 else R.drawable.ic_baseline_favorite_notselect_24)
+            editorBtns.putBoolean("11",is11Clicked)
+            editorBtns.apply()
         }
         binding.btnFav12.setOnClickListener{
             if (registerState==true) {
