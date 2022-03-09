@@ -170,89 +170,86 @@ class FavoriteFragment() :Fragment(R.layout.fragment_favorite){
             if (!is12Clicked&&!is11Clicked)
                 binding.m1.visibility=View.GONE
         }
-//
-//        binding.btnFav21.setOnClickListener{
-//            if (registerState==true) {
-//                is21Clicked=!is21Clicked
-//                binding.btnFav21.setBackgroundResource(if (is21Clicked) R.drawable.ic_baseline_favorite_selecte_24 else R.drawable.ic_baseline_favorite_notselect_24)
-//                editorBtns.putBoolean("21",is11Clicked)
-//                editorBtns.apply()
-//            }
-//            else notRegisterToast()
-//        }
-//        binding.btnFav22.setOnClickListener{
-//            if (registerState==true) {
-//                is22Clicked=!is22Clicked
-//                binding.btnFav22.setBackgroundResource(if (is22Clicked) R.drawable.ic_baseline_favorite_selecte_24 else R.drawable.ic_baseline_favorite_notselect_24)
-//                editorBtns.putBoolean("22",is22Clicked)
-//                editorBtns.apply()
-//            }
-//            else notRegisterToast()
-//        }
-//        binding.btnFav23.setOnClickListener{
-//            if (registerState==true) {
-//                is23Clicked=!is23Clicked
-//                binding.btnFav23.setBackgroundResource(if (is23Clicked) R.drawable.ic_baseline_favorite_selecte_24 else R.drawable.ic_baseline_favorite_notselect_24)
-//                editorBtns.putBoolean("23",is23Clicked)
-//                editorBtns.apply()
-//            }
-//            else notRegisterToast()
-//        }
-//
-//        binding.btnFav31.setOnClickListener{
-//            if (registerState==true) {
-//                is31Clicked=!is31Clicked
-//                binding.btnFav31.setBackgroundResource(if (is31Clicked) R.drawable.ic_baseline_favorite_selecte_24 else R.drawable.ic_baseline_favorite_notselect_24)
-//                editorBtns.putBoolean("31",is31Clicked)
-//                editorBtns.apply()
-//            }
-//            else notRegisterToast()
-//        }
-//        binding.btnFav32.setOnClickListener{
-//            if (registerState==true) {
-//                is32Clicked=!is32Clicked
-//                binding.btnFav32.setBackgroundResource(if (is32Clicked) R.drawable.ic_baseline_favorite_selecte_24 else R.drawable.ic_baseline_favorite_notselect_24)
-//                editorBtns.putBoolean("32",is32Clicked)
-//                editorBtns.apply()
-//            }
-//            else notRegisterToast()
-//        }
-//        binding.btnFav33.setOnClickListener{
-//            if (registerState==true) {
-//                is33Clicked=!is33Clicked
-//                binding.btnFav33.setBackgroundResource(if (is33Clicked) R.drawable.ic_baseline_favorite_selecte_24 else R.drawable.ic_baseline_favorite_notselect_24)
-//                editorBtns.putBoolean("33",is11Clicked)
-//                editorBtns.apply()
-//            }
-//            else notRegisterToast()
-//        }
-//
-//        binding.btnFav41.setOnClickListener{
-//            if (registerState==true) {
-//                is41Clicked=!is41Clicked
-//                binding.btnFav41.setBackgroundResource(if (is41Clicked) R.drawable.ic_baseline_favorite_selecte_24 else R.drawable.ic_baseline_favorite_notselect_24)
-//                editorBtns.putBoolean("41",is41Clicked)
-//                editorBtns.apply()
-//            }
-//            else notRegisterToast()
-//        }
-//        binding.btnFav42.setOnClickListener{
-//            if (registerState==true) {
-//                is42Clicked=!is42Clicked
-//                binding.btnFav42.setBackgroundResource(if (is42Clicked) R.drawable.ic_baseline_favorite_selecte_24 else R.drawable.ic_baseline_favorite_notselect_24)
-//                editorBtns.putBoolean("42",is42Clicked)
-//                editorBtns.apply()
-//            }
-//            else notRegisterToast()
-//        }
-//        binding.btnFav43.setOnClickListener{
-//            if (registerState==true) {
-//                is43Clicked=!is43Clicked
-//                binding.btnFav43.setBackgroundResource(if (is43Clicked) R.drawable.ic_baseline_favorite_selecte_24 else R.drawable.ic_baseline_favorite_notselect_24)
-//                editorBtns.putBoolean("43",is43Clicked)
-//                editorBtns.apply()
-//            }
-//            else notRegisterToast()
-//        }
+        binding.btnFav21.setOnClickListener{
+            is21Clicked=!is21Clicked
+            binding.btnFav21.setBackgroundResource(if (is21Clicked) R.drawable.ic_baseline_favorite_selecte_24 else R.drawable.ic_baseline_favorite_notselect_24)
+            editorBtns.putBoolean("21",is11Clicked)
+            editorBtns.apply()
+            binding.m21.visibility=View.GONE
+            if (!is22Clicked&&!is23Clicked)
+                binding.m2.visibility=View.GONE
+        }
+        binding.btnFav22.setOnClickListener{
+            is22Clicked=!is22Clicked
+            binding.btnFav22.setBackgroundResource(if (is22Clicked) R.drawable.ic_baseline_favorite_selecte_24 else R.drawable.ic_baseline_favorite_notselect_24)
+            editorBtns.putBoolean("22",is22Clicked)
+            editorBtns.apply()
+            binding.m22.visibility=View.GONE
+            if (!is21Clicked&&!is23Clicked)
+                binding.m2.visibility=View.GONE
+        }
+        binding.btnFav23.setOnClickListener{
+            is23Clicked=!is23Clicked
+            binding.btnFav23.setBackgroundResource(if (is23Clicked) R.drawable.ic_baseline_favorite_selecte_24 else R.drawable.ic_baseline_favorite_notselect_24)
+            editorBtns.putBoolean("23",is23Clicked)
+            editorBtns.apply()
+            binding.m23.visibility=View.GONE
+            if (!is22Clicked&&!is21Clicked)
+                binding.m2.visibility=View.GONE
+        }
+        binding.btnFav31.setOnClickListener{
+            is31Clicked=!is31Clicked
+            binding.btnFav31.setBackgroundResource(if (is31Clicked) R.drawable.ic_baseline_favorite_selecte_24 else R.drawable.ic_baseline_favorite_notselect_24)
+            editorBtns.putBoolean("31",is31Clicked)
+            editorBtns.apply()
+            binding.m31.visibility=View.GONE
+            if (!is32Clicked&&!is33Clicked)
+                binding.m3.visibility=View.GONE
+        }
+        binding.btnFav32.setOnClickListener{
+            is32Clicked=!is32Clicked
+            binding.btnFav32.setBackgroundResource(if (is32Clicked) R.drawable.ic_baseline_favorite_selecte_24 else R.drawable.ic_baseline_favorite_notselect_24)
+            editorBtns.putBoolean("32",is32Clicked)
+            editorBtns.apply()
+            binding.m32.visibility=View.GONE
+            if (!is31Clicked&&!is33Clicked)
+                binding.m3.visibility=View.GONE
+        }
+        binding.btnFav33.setOnClickListener{
+            is33Clicked=!is33Clicked
+            binding.btnFav33.setBackgroundResource(if (is33Clicked) R.drawable.ic_baseline_favorite_selecte_24 else R.drawable.ic_baseline_favorite_notselect_24)
+            editorBtns.putBoolean("33",is11Clicked)
+            editorBtns.apply()
+            binding.m33.visibility=View.GONE
+            if (!is32Clicked&&!is31Clicked)
+                binding.m3.visibility=View.GONE
+        }
+        binding.btnFav41.setOnClickListener{
+            is41Clicked=!is41Clicked
+            binding.btnFav41.setBackgroundResource(if (is41Clicked) R.drawable.ic_baseline_favorite_selecte_24 else R.drawable.ic_baseline_favorite_notselect_24)
+            editorBtns.putBoolean("41",is41Clicked)
+            editorBtns.apply()
+            binding.m41.visibility=View.GONE
+            if (!is42Clicked&&!is43Clicked)
+                binding.m4.visibility=View.GONE
+        }
+        binding.btnFav42.setOnClickListener{
+            is42Clicked=!is42Clicked
+            binding.btnFav42.setBackgroundResource(if (is42Clicked) R.drawable.ic_baseline_favorite_selecte_24 else R.drawable.ic_baseline_favorite_notselect_24)
+            editorBtns.putBoolean("42",is42Clicked)
+            editorBtns.apply()
+            binding.m42.visibility=View.GONE
+            if (!is41Clicked&&!is43Clicked)
+                binding.m4.visibility=View.GONE
+        }
+        binding.btnFav43.setOnClickListener{
+            is43Clicked=!is43Clicked
+            binding.btnFav43.setBackgroundResource(if (is43Clicked) R.drawable.ic_baseline_favorite_selecte_24 else R.drawable.ic_baseline_favorite_notselect_24)
+            editorBtns.putBoolean("43",is43Clicked)
+            editorBtns.apply()
+            binding.m43.visibility=View.GONE
+            if (!is41Clicked&&!is42Clicked)
+                binding.m4.visibility=View.GONE
+        }
     }
 }
