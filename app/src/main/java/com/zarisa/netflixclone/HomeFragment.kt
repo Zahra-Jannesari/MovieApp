@@ -138,7 +138,7 @@ class HomeFragment : Fragment() {
     }
 
     private fun notRegisterToast(){
-        Toast.makeText(activity,"You Have not registered yet!",Toast.LENGTH_SHORT).show()
+        Toast.makeText(activity,"You should register first from profile page!",Toast.LENGTH_SHORT).show()
     }
 
     override fun onCreateOptionsMenu(menu: Menu, inflater: MenuInflater) {
