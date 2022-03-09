@@ -34,9 +34,6 @@ class HomeFragment : Fragment() {
         (activity as AppCompatActivity).supportActionBar?.title = "FILMOLOGY"
         registerState=sharedPrefInfo?.getBoolean(isRegistered,false)
 
-//        val editorBtns = shareBtnState.edit()
-//        editorBtns.putBoolean("11",false)
-//        editorBtns.apply()
         favBtnsSetStateAndOnClick()
     }
 
@@ -59,107 +56,126 @@ class HomeFragment : Fragment() {
         var is42Clicked=shareBtnState.getBoolean("42",false)
         var is43Clicked=shareBtnState.getBoolean("43",false)
         binding.btnFav11.setBackgroundResource(if (is11Clicked) R.drawable.ic_baseline_favorite_selecte_24 else R.drawable.ic_baseline_favorite_notselect_24)
-        binding.btnFav12.setBackgroundResource(if (StateOfFavButtons.isBtn12Clicked) R.drawable.ic_baseline_favorite_selecte_24 else R.drawable.ic_baseline_favorite_notselect_24)
-        binding.btnFav13.setBackgroundResource(if (StateOfFavButtons.isBtn13Clicked) R.drawable.ic_baseline_favorite_selecte_24 else R.drawable.ic_baseline_favorite_notselect_24)
-        binding.btnFav21.setBackgroundResource(if (StateOfFavButtons.isBtn21Clicked) R.drawable.ic_baseline_favorite_selecte_24 else R.drawable.ic_baseline_favorite_notselect_24)
-        binding.btnFav22.setBackgroundResource(if (StateOfFavButtons.isBtn22Clicked) R.drawable.ic_baseline_favorite_selecte_24 else R.drawable.ic_baseline_favorite_notselect_24)
-        binding.btnFav23.setBackgroundResource(if (StateOfFavButtons.isBtn23Clicked) R.drawable.ic_baseline_favorite_selecte_24 else R.drawable.ic_baseline_favorite_notselect_24)
-        binding.btnFav31.setBackgroundResource(if (StateOfFavButtons.isBtn31Clicked) R.drawable.ic_baseline_favorite_selecte_24 else R.drawable.ic_baseline_favorite_notselect_24)
-        binding.btnFav32.setBackgroundResource(if (StateOfFavButtons.isBtn32Clicked) R.drawable.ic_baseline_favorite_selecte_24 else R.drawable.ic_baseline_favorite_notselect_24)
-        binding.btnFav33.setBackgroundResource(if (StateOfFavButtons.isBtn33Clicked) R.drawable.ic_baseline_favorite_selecte_24 else R.drawable.ic_baseline_favorite_notselect_24)
-        binding.btnFav41.setBackgroundResource(if (StateOfFavButtons.isBtn41Clicked) R.drawable.ic_baseline_favorite_selecte_24 else R.drawable.ic_baseline_favorite_notselect_24)
-        binding.btnFav42.setBackgroundResource(if (StateOfFavButtons.isBtn42Clicked) R.drawable.ic_baseline_favorite_selecte_24 else R.drawable.ic_baseline_favorite_notselect_24)
-        binding.btnFav43.setBackgroundResource(if (StateOfFavButtons.isBtn43Clicked) R.drawable.ic_baseline_favorite_selecte_24 else R.drawable.ic_baseline_favorite_notselect_24)
+        binding.btnFav12.setBackgroundResource(if (is12Clicked) R.drawable.ic_baseline_favorite_selecte_24 else R.drawable.ic_baseline_favorite_notselect_24)
+        binding.btnFav13.setBackgroundResource(if (is13Clicked) R.drawable.ic_baseline_favorite_selecte_24 else R.drawable.ic_baseline_favorite_notselect_24)
+        binding.btnFav21.setBackgroundResource(if (is21Clicked) R.drawable.ic_baseline_favorite_selecte_24 else R.drawable.ic_baseline_favorite_notselect_24)
+        binding.btnFav22.setBackgroundResource(if (is22Clicked) R.drawable.ic_baseline_favorite_selecte_24 else R.drawable.ic_baseline_favorite_notselect_24)
+        binding.btnFav23.setBackgroundResource(if (is23Clicked) R.drawable.ic_baseline_favorite_selecte_24 else R.drawable.ic_baseline_favorite_notselect_24)
+        binding.btnFav31.setBackgroundResource(if (is31Clicked) R.drawable.ic_baseline_favorite_selecte_24 else R.drawable.ic_baseline_favorite_notselect_24)
+        binding.btnFav32.setBackgroundResource(if (is32Clicked) R.drawable.ic_baseline_favorite_selecte_24 else R.drawable.ic_baseline_favorite_notselect_24)
+        binding.btnFav33.setBackgroundResource(if (is33Clicked) R.drawable.ic_baseline_favorite_selecte_24 else R.drawable.ic_baseline_favorite_notselect_24)
+        binding.btnFav41.setBackgroundResource(if (is41Clicked) R.drawable.ic_baseline_favorite_selecte_24 else R.drawable.ic_baseline_favorite_notselect_24)
+        binding.btnFav42.setBackgroundResource(if (is42Clicked) R.drawable.ic_baseline_favorite_selecte_24 else R.drawable.ic_baseline_favorite_notselect_24)
+        binding.btnFav43.setBackgroundResource(if (is43Clicked) R.drawable.ic_baseline_favorite_selecte_24 else R.drawable.ic_baseline_favorite_notselect_24)
 
         binding.btnFav11.setOnClickListener{
-//            if (registerState==true) {
-//                StateOfFavButtons.isBtn11Clicked = !StateOfFavButtons.isBtn11Clicked
-//                binding.btnFav11.setBackgroundResource(if (StateOfFavButtons.isBtn11Clicked) R.drawable.ic_baseline_favorite_selecte_24 else R.drawable.ic_baseline_favorite_notselect_24)
-//            }
-//            else notRegisterToast()
-
-            is11Clicked=!is11Clicked
-            binding.btnFav11.setBackgroundResource(if (is11Clicked) R.drawable.ic_baseline_favorite_selecte_24 else R.drawable.ic_baseline_favorite_notselect_24)
-            editorBtns.putBoolean("11",is11Clicked)
-            editorBtns.apply()
+            if (registerState==true) {
+                is11Clicked=!is11Clicked
+                binding.btnFav11.setBackgroundResource(if (is11Clicked) R.drawable.ic_baseline_favorite_selecte_24 else R.drawable.ic_baseline_favorite_notselect_24)
+                editorBtns.putBoolean("11",is11Clicked)
+                editorBtns.apply()
+            }
+            else notRegisterToast()
         }
         binding.btnFav12.setOnClickListener{
             if (registerState==true) {
-            StateOfFavButtons.isBtn12Clicked = !StateOfFavButtons.isBtn12Clicked
-            binding.btnFav12.setBackgroundResource(if (StateOfFavButtons.isBtn12Clicked) R.drawable.ic_baseline_favorite_selecte_24 else R.drawable.ic_baseline_favorite_notselect_24)
+                is12Clicked=!is12Clicked
+                binding.btnFav12.setBackgroundResource(if (is12Clicked) R.drawable.ic_baseline_favorite_selecte_24 else R.drawable.ic_baseline_favorite_notselect_24)
+                editorBtns.putBoolean("12",is12Clicked)
+                editorBtns.apply()
             }
             else notRegisterToast()
         }
         binding.btnFav13.setOnClickListener{
             if (registerState==true) {
-            StateOfFavButtons.isBtn13Clicked = !StateOfFavButtons.isBtn13Clicked
-            binding.btnFav13.setBackgroundResource(if (StateOfFavButtons.isBtn13Clicked) R.drawable.ic_baseline_favorite_selecte_24 else R.drawable.ic_baseline_favorite_notselect_24)
+                is13Clicked=!is13Clicked
+                binding.btnFav13.setBackgroundResource(if (is13Clicked) R.drawable.ic_baseline_favorite_selecte_24 else R.drawable.ic_baseline_favorite_notselect_24)
+                editorBtns.putBoolean("13",is13Clicked)
+                editorBtns.apply()
             }
             else notRegisterToast()
         }
 
         binding.btnFav21.setOnClickListener{
             if (registerState==true) {
-            StateOfFavButtons.isBtn21Clicked = !StateOfFavButtons.isBtn21Clicked
-            binding.btnFav21.setBackgroundResource(if (StateOfFavButtons.isBtn21Clicked) R.drawable.ic_baseline_favorite_selecte_24 else R.drawable.ic_baseline_favorite_notselect_24)
+                is21Clicked=!is21Clicked
+                binding.btnFav21.setBackgroundResource(if (is21Clicked) R.drawable.ic_baseline_favorite_selecte_24 else R.drawable.ic_baseline_favorite_notselect_24)
+                editorBtns.putBoolean("21",is11Clicked)
+                editorBtns.apply()
             }
             else notRegisterToast()
         }
         binding.btnFav22.setOnClickListener{
             if (registerState==true) {
-            StateOfFavButtons.isBtn22Clicked = !StateOfFavButtons.isBtn22Clicked
-            binding.btnFav22.setBackgroundResource(if (StateOfFavButtons.isBtn22Clicked) R.drawable.ic_baseline_favorite_selecte_24 else R.drawable.ic_baseline_favorite_notselect_24)
+                is22Clicked=!is22Clicked
+                binding.btnFav22.setBackgroundResource(if (is22Clicked) R.drawable.ic_baseline_favorite_selecte_24 else R.drawable.ic_baseline_favorite_notselect_24)
+                editorBtns.putBoolean("22",is22Clicked)
+                editorBtns.apply()
             }
             else notRegisterToast()
         }
         binding.btnFav23.setOnClickListener{
             if (registerState==true) {
-            StateOfFavButtons.isBtn23Clicked = !StateOfFavButtons.isBtn23Clicked
-            binding.btnFav23.setBackgroundResource(if (StateOfFavButtons.isBtn23Clicked) R.drawable.ic_baseline_favorite_selecte_24 else R.drawable.ic_baseline_favorite_notselect_24)
+                is23Clicked=!is23Clicked
+                binding.btnFav23.setBackgroundResource(if (is23Clicked) R.drawable.ic_baseline_favorite_selecte_24 else R.drawable.ic_baseline_favorite_notselect_24)
+                editorBtns.putBoolean("23",is23Clicked)
+                editorBtns.apply()
             }
             else notRegisterToast()
         }
 
         binding.btnFav31.setOnClickListener{
             if (registerState==true) {
-            StateOfFavButtons.isBtn31Clicked = !StateOfFavButtons.isBtn31Clicked
-            binding.btnFav31.setBackgroundResource(if (StateOfFavButtons.isBtn31Clicked) R.drawable.ic_baseline_favorite_selecte_24 else R.drawable.ic_baseline_favorite_notselect_24)
+                is31Clicked=!is31Clicked
+                binding.btnFav31.setBackgroundResource(if (is31Clicked) R.drawable.ic_baseline_favorite_selecte_24 else R.drawable.ic_baseline_favorite_notselect_24)
+                editorBtns.putBoolean("31",is31Clicked)
+                editorBtns.apply()
             }
             else notRegisterToast()
         }
         binding.btnFav32.setOnClickListener{
             if (registerState==true) {
-            StateOfFavButtons.isBtn32Clicked = !StateOfFavButtons.isBtn32Clicked
-            binding.btnFav32.setBackgroundResource(if (StateOfFavButtons.isBtn32Clicked) R.drawable.ic_baseline_favorite_selecte_24 else R.drawable.ic_baseline_favorite_notselect_24)
+                is32Clicked=!is32Clicked
+                binding.btnFav32.setBackgroundResource(if (is32Clicked) R.drawable.ic_baseline_favorite_selecte_24 else R.drawable.ic_baseline_favorite_notselect_24)
+                editorBtns.putBoolean("32",is32Clicked)
+                editorBtns.apply()
             }
             else notRegisterToast()
         }
         binding.btnFav33.setOnClickListener{
             if (registerState==true) {
-            StateOfFavButtons.isBtn33Clicked = !StateOfFavButtons.isBtn33Clicked
-            binding.btnFav33.setBackgroundResource(if (StateOfFavButtons.isBtn33Clicked) R.drawable.ic_baseline_favorite_selecte_24 else R.drawable.ic_baseline_favorite_notselect_24)
+                is33Clicked=!is33Clicked
+                binding.btnFav33.setBackgroundResource(if (is33Clicked) R.drawable.ic_baseline_favorite_selecte_24 else R.drawable.ic_baseline_favorite_notselect_24)
+                editorBtns.putBoolean("33",is11Clicked)
+                editorBtns.apply()
             }
             else notRegisterToast()
         }
 
         binding.btnFav41.setOnClickListener{
             if (registerState==true) {
-            StateOfFavButtons.isBtn41Clicked = !StateOfFavButtons.isBtn41Clicked
-            binding.btnFav41.setBackgroundResource(if (StateOfFavButtons.isBtn41Clicked) R.drawable.ic_baseline_favorite_selecte_24 else R.drawable.ic_baseline_favorite_notselect_24)
+                is41Clicked=!is41Clicked
+                binding.btnFav41.setBackgroundResource(if (is41Clicked) R.drawable.ic_baseline_favorite_selecte_24 else R.drawable.ic_baseline_favorite_notselect_24)
+                editorBtns.putBoolean("41",is41Clicked)
+                editorBtns.apply()
             }
             else notRegisterToast()
         }
         binding.btnFav42.setOnClickListener{
             if (registerState==true) {
-            StateOfFavButtons.isBtn42Clicked = !StateOfFavButtons.isBtn42Clicked
-            binding.btnFav42.setBackgroundResource(if (StateOfFavButtons.isBtn42Clicked) R.drawable.ic_baseline_favorite_selecte_24 else R.drawable.ic_baseline_favorite_notselect_24)
+                is42Clicked=!is42Clicked
+                binding.btnFav42.setBackgroundResource(if (is42Clicked) R.drawable.ic_baseline_favorite_selecte_24 else R.drawable.ic_baseline_favorite_notselect_24)
+                editorBtns.putBoolean("42",is42Clicked)
+                editorBtns.apply()
             }
             else notRegisterToast()
         }
         binding.btnFav43.setOnClickListener{
             if (registerState==true) {
-            StateOfFavButtons.isBtn43Clicked = !StateOfFavButtons.isBtn43Clicked
-            binding.btnFav43.setBackgroundResource(if (StateOfFavButtons.isBtn43Clicked) R.drawable.ic_baseline_favorite_selecte_24 else R.drawable.ic_baseline_favorite_notselect_24)
+                is43Clicked=!is43Clicked
+                binding.btnFav43.setBackgroundResource(if (is43Clicked) R.drawable.ic_baseline_favorite_selecte_24 else R.drawable.ic_baseline_favorite_notselect_24)
+                editorBtns.putBoolean("43",is43Clicked)
+                editorBtns.apply()
             }
             else notRegisterToast()
         }
