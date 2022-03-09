@@ -3,10 +3,11 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ProfileFragment">
+    tools:context=".ProfileFragment"
+    android:orientation="vertical">
     <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="wrap_content">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -58,7 +59,9 @@
             <androidx.cardview.widget.CardView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_margin="8dp">
+                android:layout_margin="8dp"
+                android:visibility="invisible"
+                android:id="@+id/card_username">
 
                 <TextView
                     android:id="@+id/textView_username"
@@ -69,12 +72,15 @@
                     android:gravity="center|start"
                     android:paddingHorizontal="12dp"
                     android:textStyle="bold"
-                    android:textSize="7pt"/>
+                    android:textSize="7pt"
+                    />
             </androidx.cardview.widget.CardView>
             <androidx.cardview.widget.CardView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_margin="8dp">
+                android:layout_margin="8dp"
+                android:visibility="invisible"
+                android:id="@+id/card_phone">
 
                 <TextView
                     android:id="@+id/textView_phone"
@@ -87,19 +93,17 @@
                     android:textStyle="bold"
                     android:textSize="7pt"/>
             </androidx.cardview.widget.CardView>
-            <androidx.cardview.widget.CardView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_margin="8dp"/>
 
             <Button
+                android:layout_marginTop="80dp"
                 android:id="@+id/button_changeInformation"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="CHANGE INFORMATION"
-                android:layout_margin="8dp"/>
+                android:layout_marginHorizontal="8dp"
+                android:layout_gravity="bottom"/>
             <Button
-                android:id="@+id/button_EnterNewUser"
+                android:id="@+id/button_logOut"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="LOG OUT"
@@ -107,6 +111,5 @@
                 android:backgroundTint="@color/customTheme_light"/>
         </LinearLayout>
     </ScrollView>
-
 
 </LinearLayout>

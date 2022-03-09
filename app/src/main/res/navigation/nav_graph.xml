@@ -37,7 +37,14 @@
         android:id="@+id/profileFragment"
         android:name="com.zarisa.netflixclone.ProfileFragment"
         android:label="fragment_profile"
-        tools:layout="@layout/fragment_profile" />
+        tools:layout="@layout/fragment_profile" >
+        <action
+            android:id="@+id/action_profileFragment_to_registerFormFragment"
+            app:destination="@id/registerFormFragment" />
+        <action
+            android:id="@+id/action_profileFragment_to_homeFragment"
+            app:destination="@id/homeFragment" />
+    </fragment>
     <fragment
         android:id="@+id/registerFormFragment"
         android:name="com.zarisa.netflixclone.RegisterFormFragment"
