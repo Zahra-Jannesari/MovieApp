@@ -19,13 +19,15 @@
             android:layout_height="230dp"
             android:layout_margin="5dp"
             app:cardCornerRadius="20dp"
+            android:id="@+id/m1"
             >
 
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:orientation="horizontal"
-                android:background="@color/customTheme_light">
+                android:background="@color/customTheme_light"
+                >
 
                 <TextView
                     android:id="@+id/textView_genre1"
@@ -61,7 +63,8 @@
                             android:layout_width="wrap_content"
                             android:layout_height="match_parent"
                             android:layout_marginEnd="16dp"
-                            android:layout_marginStart="16dp">
+                            android:layout_marginStart="16dp"
+                            android:id="@+id/m11">
 
                             <ImageView
                                 android:id="@+id/imageView_genre11"
@@ -101,14 +104,14 @@
                                 android:backgroundTint="@color/customTheme_light">
 
                                 <ImageButton
-                                    android:id="@+id/radio0"
+                                    android:id="@+id/btn_fav11"
                                     android:layout_width="30dp"
                                     android:layout_height="30dp"
                                     android:background="@drawable/ic_baseline_favorite_notselect_24"
-                                    app:layout_constraintBottom_toBottomOf="@+id/imageView_genre11"
-                                    app:layout_constraintEnd_toEndOf="@+id/imageView_genre11"
+                                    app:layout_constraintBottom_toBottomOf="parent"
+                                    app:layout_constraintEnd_toEndOf="parent"
                                     app:layout_constraintStart_toStartOf="parent"
-                                    app:layout_constraintTop_toTopOf="@+id/imageView_genre11"
+                                    app:layout_constraintTop_toTopOf="parent"
                                     tools:ignore="TouchTargetSizeCheck,SpeakableTextPresentCheck" />
                             </androidx.cardview.widget.CardView>
 
@@ -116,7 +119,8 @@
                         <androidx.constraintlayout.widget.ConstraintLayout
                             android:layout_width="wrap_content"
                             android:layout_height="match_parent"
-                            android:layout_marginEnd="16dp">
+                            android:layout_marginEnd="16dp"
+                            android:id="@+id/m12">
 
                             <ImageView
                                 android:id="@+id/imageView_genre12"
@@ -143,11 +147,34 @@
                                 app:layout_constraintHorizontal_bias="0.533"
                                 app:layout_constraintStart_toStartOf="parent"
                                 app:layout_constraintTop_toBottomOf="@+id/imageView_genre12" />
+                            <androidx.cardview.widget.CardView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                app:layout_constraintBottom_toBottomOf="@+id/imageView_genre12"
+                                app:layout_constraintEnd_toEndOf="@+id/imageView_genre12"
+                                app:layout_constraintHorizontal_bias="0.95"
+                                app:layout_constraintStart_toStartOf="@+id/imageView_genre12"
+                                app:layout_constraintTop_toTopOf="@+id/imageView_genre12"
+                                app:layout_constraintVertical_bias="0.95"
+                                android:backgroundTint="@color/customTheme_light">
+
+                                <ImageButton
+                                    android:id="@+id/btn_fav12"
+                                    android:layout_width="30dp"
+                                    android:layout_height="30dp"
+                                    android:background="@drawable/ic_baseline_favorite_notselect_24"
+                                    app:layout_constraintBottom_toBottomOf="parent"
+                                    app:layout_constraintEnd_toEndOf="parent"
+                                    app:layout_constraintStart_toStartOf="parent"
+                                    app:layout_constraintTop_toTopOf="parent"
+                                    tools:ignore="TouchTargetSizeCheck,SpeakableTextPresentCheck" />
+                            </androidx.cardview.widget.CardView>
                         </androidx.constraintlayout.widget.ConstraintLayout>
                         <androidx.constraintlayout.widget.ConstraintLayout
                             android:layout_width="wrap_content"
                             android:layout_height="match_parent"
                             android:layout_marginEnd="16dp"
+                            android:id="@+id/m13"
                             >
 
                             <ImageView
@@ -175,6 +202,28 @@
                                 app:layout_constraintHorizontal_bias="0.533"
                                 app:layout_constraintStart_toStartOf="parent"
                                 app:layout_constraintTop_toBottomOf="@+id/imageView_genre13" />
+                            <androidx.cardview.widget.CardView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                app:layout_constraintBottom_toBottomOf="@+id/imageView_genre13"
+                                app:layout_constraintEnd_toEndOf="@+id/imageView_genre13"
+                                app:layout_constraintHorizontal_bias="0.95"
+                                app:layout_constraintStart_toStartOf="@+id/imageView_genre13"
+                                app:layout_constraintTop_toTopOf="@+id/imageView_genre13"
+                                app:layout_constraintVertical_bias="0.95"
+                                android:backgroundTint="@color/customTheme_light">
+
+                                <ImageButton
+                                    android:id="@+id/btn_fav13"
+                                    android:layout_width="30dp"
+                                    android:layout_height="30dp"
+                                    android:background="@drawable/ic_baseline_favorite_notselect_24"
+                                    app:layout_constraintBottom_toBottomOf="parent"
+                                    app:layout_constraintEnd_toEndOf="parent"
+                                    app:layout_constraintStart_toStartOf="parent"
+                                    app:layout_constraintTop_toTopOf="parent"
+                                    tools:ignore="TouchTargetSizeCheck,SpeakableTextPresentCheck" />
+                            </androidx.cardview.widget.CardView>
                         </androidx.constraintlayout.widget.ConstraintLayout>
                     </LinearLayout>
                 </HorizontalScrollView>
@@ -186,7 +235,8 @@
             android:layout_width="match_parent"
             android:layout_height="230dp"
             android:layout_margin="5dp"
-            app:cardCornerRadius="20dp">
+            app:cardCornerRadius="20dp"
+            android:id="@+id/m2">
 
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
@@ -228,7 +278,8 @@
                             android:layout_width="wrap_content"
                             android:layout_height="match_parent"
                             android:layout_marginEnd="16dp"
-                            android:layout_marginStart="16dp">
+                            android:layout_marginStart="16dp"
+                            android:id="@+id/m21">
 
                             <ImageView
                                 android:id="@+id/imageView_genre21"
@@ -255,11 +306,34 @@
                                 app:layout_constraintHorizontal_bias="0.533"
                                 app:layout_constraintStart_toStartOf="parent"
                                 app:layout_constraintTop_toBottomOf="@+id/imageView_genre21" />
+                            <androidx.cardview.widget.CardView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                app:layout_constraintBottom_toBottomOf="@+id/imageView_genre21"
+                                app:layout_constraintEnd_toEndOf="@+id/imageView_genre21"
+                                app:layout_constraintHorizontal_bias="0.95"
+                                app:layout_constraintStart_toStartOf="@+id/imageView_genre21"
+                                app:layout_constraintTop_toTopOf="@+id/imageView_genre21"
+                                app:layout_constraintVertical_bias="0.95"
+                                android:backgroundTint="@color/customTheme_light">
+
+                                <ImageButton
+                                    android:id="@+id/btn_fav21"
+                                    android:layout_width="30dp"
+                                    android:layout_height="30dp"
+                                    android:background="@drawable/ic_baseline_favorite_notselect_24"
+                                    app:layout_constraintBottom_toBottomOf="parent"
+                                    app:layout_constraintEnd_toEndOf="parent"
+                                    app:layout_constraintStart_toStartOf="parent"
+                                    app:layout_constraintTop_toTopOf="parent"
+                                    tools:ignore="TouchTargetSizeCheck,SpeakableTextPresentCheck" />
+                            </androidx.cardview.widget.CardView>
                         </androidx.constraintlayout.widget.ConstraintLayout>
                         <androidx.constraintlayout.widget.ConstraintLayout
                             android:layout_width="wrap_content"
                             android:layout_height="match_parent"
-                            android:layout_marginEnd="16dp">
+                            android:layout_marginEnd="16dp"
+                            android:id="@+id/m22">
 
                             <ImageView
                                 android:id="@+id/imageView_genre22"
@@ -286,11 +360,34 @@
                                 app:layout_constraintHorizontal_bias="0.533"
                                 app:layout_constraintStart_toStartOf="parent"
                                 app:layout_constraintTop_toBottomOf="@+id/imageView_genre22" />
+                            <androidx.cardview.widget.CardView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                app:layout_constraintBottom_toBottomOf="@+id/imageView_genre22"
+                                app:layout_constraintEnd_toEndOf="@+id/imageView_genre22"
+                                app:layout_constraintHorizontal_bias="0.95"
+                                app:layout_constraintStart_toStartOf="@+id/imageView_genre22"
+                                app:layout_constraintTop_toTopOf="@+id/imageView_genre22"
+                                app:layout_constraintVertical_bias="0.95"
+                                android:backgroundTint="@color/customTheme_light">
+
+                                <ImageButton
+                                    android:id="@+id/btn_fav22"
+                                    android:layout_width="30dp"
+                                    android:layout_height="30dp"
+                                    android:background="@drawable/ic_baseline_favorite_notselect_24"
+                                    app:layout_constraintBottom_toBottomOf="parent"
+                                    app:layout_constraintEnd_toEndOf="parent"
+                                    app:layout_constraintStart_toStartOf="parent"
+                                    app:layout_constraintTop_toTopOf="parent"
+                                    tools:ignore="TouchTargetSizeCheck,SpeakableTextPresentCheck" />
+                            </androidx.cardview.widget.CardView>
                         </androidx.constraintlayout.widget.ConstraintLayout>
                         <androidx.constraintlayout.widget.ConstraintLayout
                             android:layout_width="wrap_content"
                             android:layout_height="match_parent"
                             android:layout_marginEnd="16dp"
+                            android:id="@+id/m23"
                             >
 
                             <ImageView
@@ -319,6 +416,28 @@
                                 app:layout_constraintHorizontal_bias="0.533"
                                 app:layout_constraintStart_toStartOf="parent"
                                 app:layout_constraintTop_toBottomOf="@+id/imageView_genre23" />
+                            <androidx.cardview.widget.CardView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                app:layout_constraintBottom_toBottomOf="@+id/imageView_genre23"
+                                app:layout_constraintEnd_toEndOf="@+id/imageView_genre23"
+                                app:layout_constraintHorizontal_bias="0.95"
+                                app:layout_constraintStart_toStartOf="@+id/imageView_genre23"
+                                app:layout_constraintTop_toTopOf="@+id/imageView_genre23"
+                                app:layout_constraintVertical_bias="0.95"
+                                android:backgroundTint="@color/customTheme_light">
+
+                                <ImageButton
+                                    android:id="@+id/btn_fav23"
+                                    android:layout_width="30dp"
+                                    android:layout_height="30dp"
+                                    android:background="@drawable/ic_baseline_favorite_notselect_24"
+                                    app:layout_constraintBottom_toBottomOf="parent"
+                                    app:layout_constraintEnd_toEndOf="parent"
+                                    app:layout_constraintStart_toStartOf="parent"
+                                    app:layout_constraintTop_toTopOf="parent"
+                                    tools:ignore="TouchTargetSizeCheck,SpeakableTextPresentCheck" />
+                            </androidx.cardview.widget.CardView>
                         </androidx.constraintlayout.widget.ConstraintLayout>
                     </LinearLayout>
                 </HorizontalScrollView>
@@ -329,7 +448,8 @@
             android:layout_width="match_parent"
             android:layout_height="230dp"
             android:layout_margin="5dp"
-            app:cardCornerRadius="20dp">
+            app:cardCornerRadius="20dp"
+            android:id="@+id/m3">
 
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
@@ -371,7 +491,8 @@
                             android:layout_width="wrap_content"
                             android:layout_height="match_parent"
                             android:layout_marginEnd="16dp"
-                            android:layout_marginStart="16dp">
+                            android:layout_marginStart="16dp"
+                            android:id="@+id/m31">
 
                             <ImageView
                                 android:id="@+id/imageView_genre31"
@@ -398,11 +519,34 @@
                                 app:layout_constraintHorizontal_bias="0.533"
                                 app:layout_constraintStart_toStartOf="parent"
                                 app:layout_constraintTop_toBottomOf="@+id/imageView_genre31" />
+                            <androidx.cardview.widget.CardView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                app:layout_constraintBottom_toBottomOf="@+id/imageView_genre31"
+                                app:layout_constraintEnd_toEndOf="@+id/imageView_genre31"
+                                app:layout_constraintHorizontal_bias="0.95"
+                                app:layout_constraintStart_toStartOf="@+id/imageView_genre31"
+                                app:layout_constraintTop_toTopOf="@+id/imageView_genre31"
+                                app:layout_constraintVertical_bias="0.95"
+                                android:backgroundTint="@color/customTheme_light">
+
+                                <ImageButton
+                                    android:id="@+id/btn_fav31"
+                                    android:layout_width="30dp"
+                                    android:layout_height="30dp"
+                                    android:background="@drawable/ic_baseline_favorite_notselect_24"
+                                    app:layout_constraintBottom_toBottomOf="parent"
+                                    app:layout_constraintEnd_toEndOf="parent"
+                                    app:layout_constraintStart_toStartOf="parent"
+                                    app:layout_constraintTop_toTopOf="parent"
+                                    tools:ignore="TouchTargetSizeCheck,SpeakableTextPresentCheck" />
+                            </androidx.cardview.widget.CardView>
                         </androidx.constraintlayout.widget.ConstraintLayout>
                         <androidx.constraintlayout.widget.ConstraintLayout
                             android:layout_width="wrap_content"
                             android:layout_height="match_parent"
-                            android:layout_marginEnd="16dp">
+                            android:layout_marginEnd="16dp"
+                            android:id="@+id/m32">
 
                             <ImageView
                                 android:id="@+id/imageView_genre32"
@@ -429,11 +573,34 @@
                                 app:layout_constraintHorizontal_bias="0.533"
                                 app:layout_constraintStart_toStartOf="parent"
                                 app:layout_constraintTop_toBottomOf="@+id/imageView_genre32" />
+                            <androidx.cardview.widget.CardView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                app:layout_constraintBottom_toBottomOf="@+id/imageView_genre32"
+                                app:layout_constraintEnd_toEndOf="@+id/imageView_genre32"
+                                app:layout_constraintHorizontal_bias="0.95"
+                                app:layout_constraintStart_toStartOf="@+id/imageView_genre32"
+                                app:layout_constraintTop_toTopOf="@+id/imageView_genre32"
+                                app:layout_constraintVertical_bias="0.95"
+                                android:backgroundTint="@color/customTheme_light">
+
+                                <ImageButton
+                                    android:id="@+id/btn_fav32"
+                                    android:layout_width="30dp"
+                                    android:layout_height="30dp"
+                                    android:background="@drawable/ic_baseline_favorite_notselect_24"
+                                    app:layout_constraintBottom_toBottomOf="parent"
+                                    app:layout_constraintEnd_toEndOf="parent"
+                                    app:layout_constraintStart_toStartOf="parent"
+                                    app:layout_constraintTop_toTopOf="parent"
+                                    tools:ignore="TouchTargetSizeCheck,SpeakableTextPresentCheck" />
+                            </androidx.cardview.widget.CardView>
                         </androidx.constraintlayout.widget.ConstraintLayout>
                         <androidx.constraintlayout.widget.ConstraintLayout
                             android:layout_width="wrap_content"
                             android:layout_height="match_parent"
                             android:layout_marginEnd="16dp"
+                            android:id="@+id/m33"
                             >
 
                             <ImageView
@@ -461,6 +628,28 @@
                                 app:layout_constraintHorizontal_bias="0.533"
                                 app:layout_constraintStart_toStartOf="parent"
                                 app:layout_constraintTop_toBottomOf="@+id/imageView_genre33" />
+                            <androidx.cardview.widget.CardView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                app:layout_constraintBottom_toBottomOf="@+id/imageView_genre33"
+                                app:layout_constraintEnd_toEndOf="@+id/imageView_genre33"
+                                app:layout_constraintHorizontal_bias="0.95"
+                                app:layout_constraintStart_toStartOf="@+id/imageView_genre33"
+                                app:layout_constraintTop_toTopOf="@+id/imageView_genre33"
+                                app:layout_constraintVertical_bias="0.95"
+                                android:backgroundTint="@color/customTheme_light">
+
+                                <ImageButton
+                                    android:id="@+id/btn_fav33"
+                                    android:layout_width="30dp"
+                                    android:layout_height="30dp"
+                                    android:background="@drawable/ic_baseline_favorite_notselect_24"
+                                    app:layout_constraintBottom_toBottomOf="parent"
+                                    app:layout_constraintEnd_toEndOf="parent"
+                                    app:layout_constraintStart_toStartOf="parent"
+                                    app:layout_constraintTop_toTopOf="parent"
+                                    tools:ignore="TouchTargetSizeCheck,SpeakableTextPresentCheck" />
+                            </androidx.cardview.widget.CardView>
                         </androidx.constraintlayout.widget.ConstraintLayout>
                     </LinearLayout>
                 </HorizontalScrollView>
@@ -471,7 +660,8 @@
             android:layout_width="match_parent"
             android:layout_height="230dp"
             android:layout_margin="5dp"
-            app:cardCornerRadius="20dp">
+            app:cardCornerRadius="20dp"
+            android:id="@+id/m4">
 
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
@@ -513,7 +703,8 @@
                             android:layout_width="wrap_content"
                             android:layout_height="match_parent"
                             android:layout_marginEnd="16dp"
-                            android:layout_marginStart="16dp">
+                            android:layout_marginStart="16dp"
+                            android:id="@+id/m41">
 
                             <ImageView
                                 android:id="@+id/imageView_genre41"
@@ -540,11 +731,34 @@
                                 app:layout_constraintHorizontal_bias="0.533"
                                 app:layout_constraintStart_toStartOf="parent"
                                 app:layout_constraintTop_toBottomOf="@+id/imageView_genre41" />
+                            <androidx.cardview.widget.CardView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                app:layout_constraintBottom_toBottomOf="@+id/imageView_genre41"
+                                app:layout_constraintEnd_toEndOf="@+id/imageView_genre41"
+                                app:layout_constraintHorizontal_bias="0.95"
+                                app:layout_constraintStart_toStartOf="@+id/imageView_genre41"
+                                app:layout_constraintTop_toTopOf="@+id/imageView_genre41"
+                                app:layout_constraintVertical_bias="0.95"
+                                android:backgroundTint="@color/customTheme_light">
+
+                                <ImageButton
+                                    android:id="@+id/btn_fav41"
+                                    android:layout_width="30dp"
+                                    android:layout_height="30dp"
+                                    android:background="@drawable/ic_baseline_favorite_notselect_24"
+                                    app:layout_constraintBottom_toBottomOf="parent"
+                                    app:layout_constraintEnd_toEndOf="parent"
+                                    app:layout_constraintStart_toStartOf="parent"
+                                    app:layout_constraintTop_toTopOf="parent"
+                                    tools:ignore="TouchTargetSizeCheck,SpeakableTextPresentCheck" />
+                            </androidx.cardview.widget.CardView>
                         </androidx.constraintlayout.widget.ConstraintLayout>
                         <androidx.constraintlayout.widget.ConstraintLayout
                             android:layout_width="wrap_content"
                             android:layout_height="match_parent"
-                            android:layout_marginEnd="16dp">
+                            android:layout_marginEnd="16dp"
+                            android:id="@+id/m42">
 
                             <ImageView
                                 android:id="@+id/imageView_genre42"
@@ -571,11 +785,34 @@
                                 app:layout_constraintHorizontal_bias="0.533"
                                 app:layout_constraintStart_toStartOf="parent"
                                 app:layout_constraintTop_toBottomOf="@+id/imageView_genre42" />
+                            <androidx.cardview.widget.CardView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                app:layout_constraintBottom_toBottomOf="@+id/imageView_genre42"
+                                app:layout_constraintEnd_toEndOf="@+id/imageView_genre42"
+                                app:layout_constraintHorizontal_bias="0.95"
+                                app:layout_constraintStart_toStartOf="@+id/imageView_genre42"
+                                app:layout_constraintTop_toTopOf="@+id/imageView_genre42"
+                                app:layout_constraintVertical_bias="0.95"
+                                android:backgroundTint="@color/customTheme_light">
+
+                                <ImageButton
+                                    android:id="@+id/btn_fav42"
+                                    android:layout_width="30dp"
+                                    android:layout_height="30dp"
+                                    android:background="@drawable/ic_baseline_favorite_notselect_24"
+                                    app:layout_constraintBottom_toBottomOf="parent"
+                                    app:layout_constraintEnd_toEndOf="parent"
+                                    app:layout_constraintStart_toStartOf="parent"
+                                    app:layout_constraintTop_toTopOf="parent"
+                                    tools:ignore="TouchTargetSizeCheck,SpeakableTextPresentCheck" />
+                            </androidx.cardview.widget.CardView>
                         </androidx.constraintlayout.widget.ConstraintLayout>
                         <androidx.constraintlayout.widget.ConstraintLayout
                             android:layout_width="wrap_content"
                             android:layout_height="match_parent"
                             android:layout_marginEnd="16dp"
+                            android:id="@+id/m43"
                             >
 
                             <ImageView
@@ -603,6 +840,28 @@
                                 app:layout_constraintHorizontal_bias="0.533"
                                 app:layout_constraintStart_toStartOf="parent"
                                 app:layout_constraintTop_toBottomOf="@+id/imageView_genre43" />
+                            <androidx.cardview.widget.CardView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                app:layout_constraintBottom_toBottomOf="@+id/imageView_genre43"
+                                app:layout_constraintEnd_toEndOf="@+id/imageView_genre43"
+                                app:layout_constraintHorizontal_bias="0.95"
+                                app:layout_constraintStart_toStartOf="@+id/imageView_genre43"
+                                app:layout_constraintTop_toTopOf="@+id/imageView_genre43"
+                                app:layout_constraintVertical_bias="0.95"
+                                android:backgroundTint="@color/customTheme_light">
+
+                                <ImageButton
+                                    android:id="@+id/btn_fav43"
+                                    android:layout_width="30dp"
+                                    android:layout_height="30dp"
+                                    android:background="@drawable/ic_baseline_favorite_notselect_24"
+                                    app:layout_constraintBottom_toBottomOf="parent"
+                                    app:layout_constraintEnd_toEndOf="parent"
+                                    app:layout_constraintStart_toStartOf="parent"
+                                    app:layout_constraintTop_toTopOf="parent"
+                                    tools:ignore="TouchTargetSizeCheck,SpeakableTextPresentCheck" />
+                            </androidx.cardview.widget.CardView>
                         </androidx.constraintlayout.widget.ConstraintLayout>
                     </LinearLayout>
                 </HorizontalScrollView>
