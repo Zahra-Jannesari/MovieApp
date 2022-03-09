@@ -29,4 +29,5 @@ class ProfileFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
         (activity as AppCompatActivity).supportActionBar?.title = "Profile"
     }
+
 }

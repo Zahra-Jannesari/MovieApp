@@ -33,7 +33,6 @@
                 android:layout_margin="8dp"
                 app:boxStrokeWidth="0dp"
                 app:boxStrokeWidthFocused="0dp"
-
                 android:background="@drawable/edit_text_editable"
                 />
 
@@ -71,6 +70,7 @@
                 android:paddingHorizontal="16dp"
                 android:id="@+id/textField_phone"
                 android:hint="Phone"
+                android:inputType="phone"
                 android:background="@drawable/edit_text_editable"/>
 
             <Button
@@ -78,7 +78,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="@string/Register"
-                android:layout_margin="8dp"/>
+                android:layout_margin="8dp"
+                />
         </LinearLayout>
     </ScrollView>
 

@@ -4,6 +4,9 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="..\:/Users/FIX4U.IR/NetflixClone/app/src/main/res/drawable/edit_text_editable.xml" value="0.2" />
+        <entry key="..\:/Users/FIX4U.IR/NetflixClone/app/src/main/res/drawable/favorite_btn.xml" value="0.1925" />
+        <entry key="..\:/Users/FIX4U.IR/NetflixClone/app/src/main/res/drawable/ic_baseline_favorite_notselect_24.xml" value="0.2" />
+        <entry key="..\:/Users/FIX4U.IR/NetflixClone/app/src/main/res/drawable/ic_baseline_favorite_selecte_24.xml" value="0.2" />
         <entry key="..\:/Users/FIX4U.IR/NetflixClone/app/src/main/res/drawable/ic_baseline_share_24.xml" value="0.2" />
         <entry key="..\:/Users/FIX4U.IR/NetflixClone/app/src/main/res/drawable/light_background.xml" value="0.2" />
         <entry key="..\:/Users/FIX4U.IR/NetflixClone/app/src/main/res/drawable/text_view_background.xml" value="0.2" />
@@ -12,9 +15,9 @@
         <entry key="..\:/Users/FIX4U.IR/NetflixClone/app/src/main/res/layout/activity_main.xml" value="0.1875" />
         <entry key="..\:/Users/FIX4U.IR/NetflixClone/app/src/main/res/layout/fragment_coming_soon.xml" value="0.35446685878962536" />
         <entry key="..\:/Users/FIX4U.IR/NetflixClone/app/src/main/res/layout/fragment_favorite.xml" value="0.1875" />
-        <entry key="..\:/Users/FIX4U.IR/NetflixClone/app/src/main/res/layout/fragment_home.xml" value="0.33" />
+        <entry key="..\:/Users/FIX4U.IR/NetflixClone/app/src/main/res/layout/fragment_home.xml" value="0.4298245614035088" />
         <entry key="..\:/Users/FIX4U.IR/NetflixClone/app/src/main/res/layout/fragment_profile.xml" value="0.33" />
-        <entry key="..\:/Users/FIX4U.IR/NetflixClone/app/src/main/res/layout/fragment_register_form.xml" value="0.5" />
+        <entry key="..\:/Users/FIX4U.IR/NetflixClone/app/src/main/res/layout/fragment_register_form.xml" value="0.25" />
         <entry key="..\:/Users/FIX4U.IR/NetflixClone/app/src/main/res/menu/option_menu.xml" value="0.33" />
       </map>
     </option>

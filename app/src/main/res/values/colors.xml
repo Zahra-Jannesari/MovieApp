@@ -10,4 +10,5 @@
     <color name="customTheme">#170332</color>
     <color name="customTheme_light">#a69cac</color>
     <color name="textColor">#170332</color>
+    <color name="gray">#4F4E50</color>
 </resources>
