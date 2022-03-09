@@ -17,6 +17,7 @@ import com.zarisa.netflixclone.databinding.FragmentRegisterFormBinding
 class ProfileFragment : Fragment() {
     lateinit var binding: FragmentProfileBinding
     private var sharedPrefInfo: SharedPreferences? = null
+    lateinit var shareBtnState:SharedPreferences
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         activity?.onBackPressedDispatcher?.addCallback(this, object : OnBackPressedCallback(true) {
@@ -39,6 +40,7 @@ class ProfileFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
         (activity as AppCompatActivity).supportActionBar?.title = "Profile"
         sharedPrefInfo = this.activity?.getSharedPreferences("Information", Context.MODE_PRIVATE)
+        shareBtnState=this.requireActivity().getSharedPreferences("btnsState",Context.MODE_PRIVATE)
         setProfile()
         initViews()
     }
@@ -71,6 +73,21 @@ class ProfileFragment : Fragment() {
             editor?.putString(userName,"")
             editor?.putString(phone,"")
             editor?.apply()
+
+            val editorBtns = shareBtnState.edit()
+            editorBtns.putBoolean("11",false)
+            editorBtns.putBoolean("12",false)
+            editorBtns.putBoolean("13",false)
+            editorBtns.putBoolean("21",false)
+            editorBtns.putBoolean("22",false)
+            editorBtns.putBoolean("23",false)
+            editorBtns.putBoolean("31",false)
+            editorBtns.putBoolean("32",false)
+            editorBtns.putBoolean("33",false)
+            editorBtns.putBoolean("41",false)
+            editorBtns.putBoolean("42",false)
+            editorBtns.putBoolean("43",false)
+            editorBtns.apply()
             findNavController().navigate(R.id.action_profileFragment_to_homeFragment)
         }
     }

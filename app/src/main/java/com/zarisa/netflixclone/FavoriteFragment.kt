@@ -130,19 +130,6 @@ class FavoriteFragment() :Fragment(R.layout.fragment_favorite){
         var is41Clicked=shareBtnState.getBoolean("41",false)
         var is42Clicked=shareBtnState.getBoolean("42",false)
         var is43Clicked=shareBtnState.getBoolean("43",false)
-        binding.btnFav11.setBackgroundResource(if (is11Clicked) R.drawable.ic_baseline_favorite_selecte_24 else R.drawable.ic_baseline_favorite_notselect_24)
-        binding.btnFav12.setBackgroundResource(if (is12Clicked) R.drawable.ic_baseline_favorite_selecte_24 else R.drawable.ic_baseline_favorite_notselect_24)
-        binding.btnFav13.setBackgroundResource(if (is13Clicked) R.drawable.ic_baseline_favorite_selecte_24 else R.drawable.ic_baseline_favorite_notselect_24)
-        binding.btnFav21.setBackgroundResource(if (is21Clicked) R.drawable.ic_baseline_favorite_selecte_24 else R.drawable.ic_baseline_favorite_notselect_24)
-        binding.btnFav22.setBackgroundResource(if (is22Clicked) R.drawable.ic_baseline_favorite_selecte_24 else R.drawable.ic_baseline_favorite_notselect_24)
-        binding.btnFav23.setBackgroundResource(if (is23Clicked) R.drawable.ic_baseline_favorite_selecte_24 else R.drawable.ic_baseline_favorite_notselect_24)
-        binding.btnFav31.setBackgroundResource(if (is31Clicked) R.drawable.ic_baseline_favorite_selecte_24 else R.drawable.ic_baseline_favorite_notselect_24)
-        binding.btnFav32.setBackgroundResource(if (is32Clicked) R.drawable.ic_baseline_favorite_selecte_24 else R.drawable.ic_baseline_favorite_notselect_24)
-        binding.btnFav33.setBackgroundResource(if (is33Clicked) R.drawable.ic_baseline_favorite_selecte_24 else R.drawable.ic_baseline_favorite_notselect_24)
-        binding.btnFav41.setBackgroundResource(if (is41Clicked) R.drawable.ic_baseline_favorite_selecte_24 else R.drawable.ic_baseline_favorite_notselect_24)
-        binding.btnFav42.setBackgroundResource(if (is42Clicked) R.drawable.ic_baseline_favorite_selecte_24 else R.drawable.ic_baseline_favorite_notselect_24)
-        binding.btnFav43.setBackgroundResource(if (is43Clicked) R.drawable.ic_baseline_favorite_selecte_24 else R.drawable.ic_baseline_favorite_notselect_24)
-
         binding.btnFav11.setOnClickListener{
             is11Clicked=!is11Clicked
             binding.btnFav11.setBackgroundResource(if (is11Clicked) R.drawable.ic_baseline_favorite_selecte_24 else R.drawable.ic_baseline_favorite_notselect_24)
@@ -151,6 +138,7 @@ class FavoriteFragment() :Fragment(R.layout.fragment_favorite){
             binding.m11.visibility=View.GONE
             if (!is12Clicked&&!is13Clicked)
                 binding.m1.visibility=View.GONE
+            checkHaveFav()
         }
         binding.btnFav12.setOnClickListener{
             is12Clicked=!is12Clicked
@@ -160,6 +148,7 @@ class FavoriteFragment() :Fragment(R.layout.fragment_favorite){
             binding.m12.visibility=View.GONE
             if (!is11Clicked&&!is13Clicked)
                 binding.m1.visibility=View.GONE
+            checkHaveFav()
         }
         binding.btnFav13.setOnClickListener{
             is13Clicked=!is13Clicked
@@ -169,6 +158,7 @@ class FavoriteFragment() :Fragment(R.layout.fragment_favorite){
             binding.m13.visibility=View.GONE
             if (!is12Clicked&&!is11Clicked)
                 binding.m1.visibility=View.GONE
+            checkHaveFav()
         }
         binding.btnFav21.setOnClickListener{
             is21Clicked=!is21Clicked
@@ -178,6 +168,7 @@ class FavoriteFragment() :Fragment(R.layout.fragment_favorite){
             binding.m21.visibility=View.GONE
             if (!is22Clicked&&!is23Clicked)
                 binding.m2.visibility=View.GONE
+            checkHaveFav()
         }
         binding.btnFav22.setOnClickListener{
             is22Clicked=!is22Clicked
@@ -187,6 +178,7 @@ class FavoriteFragment() :Fragment(R.layout.fragment_favorite){
             binding.m22.visibility=View.GONE
             if (!is21Clicked&&!is23Clicked)
                 binding.m2.visibility=View.GONE
+            checkHaveFav()
         }
         binding.btnFav23.setOnClickListener{
             is23Clicked=!is23Clicked
@@ -196,6 +188,7 @@ class FavoriteFragment() :Fragment(R.layout.fragment_favorite){
             binding.m23.visibility=View.GONE
             if (!is22Clicked&&!is21Clicked)
                 binding.m2.visibility=View.GONE
+            checkHaveFav()
         }
         binding.btnFav31.setOnClickListener{
             is31Clicked=!is31Clicked
@@ -205,6 +198,7 @@ class FavoriteFragment() :Fragment(R.layout.fragment_favorite){
             binding.m31.visibility=View.GONE
             if (!is32Clicked&&!is33Clicked)
                 binding.m3.visibility=View.GONE
+            checkHaveFav()
         }
         binding.btnFav32.setOnClickListener{
             is32Clicked=!is32Clicked
@@ -214,6 +208,7 @@ class FavoriteFragment() :Fragment(R.layout.fragment_favorite){
             binding.m32.visibility=View.GONE
             if (!is31Clicked&&!is33Clicked)
                 binding.m3.visibility=View.GONE
+            checkHaveFav()
         }
         binding.btnFav33.setOnClickListener{
             is33Clicked=!is33Clicked
@@ -223,6 +218,7 @@ class FavoriteFragment() :Fragment(R.layout.fragment_favorite){
             binding.m33.visibility=View.GONE
             if (!is32Clicked&&!is31Clicked)
                 binding.m3.visibility=View.GONE
+            checkHaveFav()
         }
         binding.btnFav41.setOnClickListener{
             is41Clicked=!is41Clicked
@@ -232,6 +228,7 @@ class FavoriteFragment() :Fragment(R.layout.fragment_favorite){
             binding.m41.visibility=View.GONE
             if (!is42Clicked&&!is43Clicked)
                 binding.m4.visibility=View.GONE
+            checkHaveFav()
         }
         binding.btnFav42.setOnClickListener{
             is42Clicked=!is42Clicked
@@ -241,6 +238,7 @@ class FavoriteFragment() :Fragment(R.layout.fragment_favorite){
             binding.m42.visibility=View.GONE
             if (!is41Clicked&&!is43Clicked)
                 binding.m4.visibility=View.GONE
+            checkHaveFav()
         }
         binding.btnFav43.setOnClickListener{
             is43Clicked=!is43Clicked
@@ -250,6 +248,17 @@ class FavoriteFragment() :Fragment(R.layout.fragment_favorite){
             binding.m43.visibility=View.GONE
             if (!is41Clicked&&!is42Clicked)
                 binding.m4.visibility=View.GONE
+            checkHaveFav()
+        }
+
+    }
+    fun checkHaveFav(){
+        if (binding.m1.visibility!=View.VISIBLE&&binding.m2.visibility!=View.VISIBLE
+            &&binding.m2.visibility!=View.VISIBLE&&binding.m4.visibility!=View.VISIBLE){
+            binding.textViewState.let {
+                it.text="You have no favorite!"
+                it.visibility=View.VISIBLE
+            }
         }
     }
 }
