@@ -1,7 +1,7 @@
 <resources>
     <string name="app_name">NetflixClone</string>
     <string name="profile_item">profile</string>
-    <string name="favorite_item">favorite</string>
+    <string name="favorite_item">favorites</string>
     <string name="coming_soon_item">Coming soon</string>
     <string name="home_item">Home</string>
     <!-- TODO: Remove or change this placeholder text -->
