@@ -191,16 +191,16 @@ class HomeFragment : Fragment() {
     }
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
-        when(item.itemId){
-            R.id.btn_profile-> {
-                if (registerState==true)
-                    findNavController().navigate(R.id.action_homeFragment_to_profileFragment)
-                else
-                    findNavController().navigate(R.id.action_homeFragment_to_registerFormFragment)
-            }
-            R.id.btn_favorite->findNavController().navigate(R.id.action_homeFragment_to_favoriteFragment)
-            R.id.btn_comeSoon->findNavController().navigate(R.id.action_homeFragment_to_comingSoonFragment)
-        }
+//        when(item.itemId){
+//            R.id.btn_profile-> {
+//                if (registerState==true)
+//                    findNavController().navigate(R.id.action_homeFragment_to_profileFragment)
+//                else
+//                    findNavController().navigate(R.id.action_homeFragment_to_registerFormFragment)
+//            }
+//            R.id.btn_favorite->findNavController().navigate(R.id.action_homeFragment_to_favoriteFragment)
+//            R.id.btn_comeSoon->findNavController().navigate(R.id.action_homeFragment_to_comingSoonFragment)
+//        }
         return super.onOptionsItemSelected(item)
     }
 }
