@@ -59,4 +59,9 @@
         android:name="com.zarisa.netflixclone.HomeFragmentByRecyclerView"
         android:label="fragment_home_by_recycler_view"
         tools:layout="@layout/fragment_home_by_recycler_view" />
+    <fragment
+        android:id="@+id/favoriteByRecyclerViewFragment"
+        android:name="com.zarisa.netflixclone.FavoriteByRecyclerViewFragment"
+        android:label="fragment_favorite_by_recycler_view"
+        tools:layout="@layout/fragment_favorite_by_recycler_view" />
 </navigation>
