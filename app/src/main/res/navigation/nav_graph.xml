@@ -54,4 +54,9 @@
             android:id="@+id/action_registerFormFragment_to_profileFragment"
             app:destination="@id/profileFragment" />
     </fragment>
+    <fragment
+        android:id="@+id/homeFragmentByRecyclerView"
+        android:name="com.zarisa.netflixclone.HomeFragmentByRecyclerView"
+        android:label="fragment_home_by_recycler_view"
+        tools:layout="@layout/fragment_home_by_recycler_view" />
 </navigation>
