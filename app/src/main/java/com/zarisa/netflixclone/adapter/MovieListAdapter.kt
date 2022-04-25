@@ -1,14 +1,16 @@
 package com.zarisa.netflixclone.adapter
 
 import android.view.LayoutInflater
-import android.view.View
 import android.view.ViewGroup
+import android.widget.ImageButton
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
 import com.zarisa.netflixclone.databinding.MovieListItemBinding
 
-class MovieListAdapter :
+typealias like=((button: ImageButton, movie:Movie)->Unit)
+
+class MovieListAdapter ( val onItemClick:like):
     ListAdapter<Movie, MovieListAdapter.MovieHolder>(MovieDiffCallback) {
     inner class MovieHolder(val binding: MovieListItemBinding) :
         RecyclerView.ViewHolder(binding.root) {
@@ -17,6 +19,7 @@ class MovieListAdapter :
                 binding.imageViewMovieImage.setImageResource(item.MovieImage)
                 binding.textViewMovieName.text=item.movieName
                 binding.btnFav.isSelected=item.isLiked
+                binding.btnFav.setOnClickListener { onItemClick(binding.btnFav,item) }
             } catch (e: Exception) {
                 e.printStackTrace()
             }

@@ -36,7 +36,7 @@
         android:id="@+id/btn_fav"
         android:layout_width="48dp"
         android:layout_height="48dp"
-        android:src="@drawable/ic_baseline_favorite_notselect_24"
+        android:src="@drawable/favorite_selector"
         app:layout_constraintBottom_toBottomOf="@+id/imageView_movieImage"
         app:layout_constraintEnd_toEndOf="@+id/imageView_movieImage"
         app:layout_constraintHorizontal_bias="1.0"
