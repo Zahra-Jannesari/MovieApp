@@ -58,7 +58,11 @@
         android:id="@+id/homeFragmentByRecyclerView"
         android:name="com.zarisa.netflixclone.HomeFragmentByRecyclerView"
         android:label="fragment_home_by_recycler_view"
-        tools:layout="@layout/fragment_home_by_recycler_view" />
+        tools:layout="@layout/fragment_home_by_recycler_view" >
+        <action
+            android:id="@+id/action_homeFragmentByRecyclerView_to_favoriteByRecyclerViewFragment"
+            app:destination="@id/favoriteByRecyclerViewFragment" />
+    </fragment>
     <fragment
         android:id="@+id/favoriteByRecyclerViewFragment"
         android:name="com.zarisa.netflixclone.FavoriteByRecyclerViewFragment"
