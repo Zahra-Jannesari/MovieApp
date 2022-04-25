@@ -1,12 +1,11 @@
 package com.zarisa.netflixclone
 
 import android.os.Bundle
+import android.view.*
 import androidx.fragment.app.Fragment
-import android.view.LayoutInflater
-import android.view.View
-import android.view.ViewGroup
 import android.widget.Button
 import android.widget.ImageButton
+import androidx.navigation.fragment.findNavController
 import com.zarisa.netflixclone.adapter.Movie
 import com.zarisa.netflixclone.adapter.MovieListAdapter
 import com.zarisa.netflixclone.adapter.Repository
@@ -18,6 +17,7 @@ class HomeFragmentByRecyclerView : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
+        setHasOptionsMenu(true)
         binding= FragmentHomeByRecyclerViewBinding.inflate(layoutInflater, container, false)
         return binding.root
     }
@@ -28,7 +28,6 @@ class HomeFragmentByRecyclerView : Fragment() {
     }
 
     private fun bindRecyclerView() {
-//        doctor ->goTODoctorPage(doctor.id)
         val movieAdapter = MovieListAdapter(){button,movie ->favoriteBtnOnClick(button, movie)}
         binding.recyclerview.adapter = movieAdapter
         Repository.addTestDate()
@@ -36,7 +35,7 @@ class HomeFragmentByRecyclerView : Fragment() {
     }
     private fun favoriteBtnOnClick(button: ImageButton, movie:Movie){
         button.setSelected(!(button.isSelected))
-        movie.isLiked=!(button.isSelected)
+        movie.isLiked=button.isSelected
 //        if (button.isSelected){
 //            button.isSelected = false
 //            movie.isLiked=false
@@ -45,5 +44,16 @@ class HomeFragmentByRecyclerView : Fragment() {
 //            button.isSelected = true
 //            movie.isLiked=true
 //        }
+    }
+    override fun onCreateOptionsMenu(menu: Menu, inflater: MenuInflater) {
+        inflater.inflate(R.menu.option_menu,menu)
+        super.onCreateOptionsMenu(menu, inflater)
+    }
+
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        when(item.itemId){
+            R.id.btn_favorite->findNavController().navigate(R.id.action_homeFragmentByRecyclerView_to_favoriteByRecyclerViewFragment)
+        }
+        return super.onOptionsItemSelected(item)
     }
 }
