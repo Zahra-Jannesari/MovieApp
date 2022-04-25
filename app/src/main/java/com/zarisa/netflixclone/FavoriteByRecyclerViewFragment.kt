@@ -5,6 +5,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.AdapterView
 import android.widget.ImageButton
 import com.zarisa.netflixclone.adapter.Movie
 import com.zarisa.netflixclone.adapter.MovieListAdapter
@@ -29,23 +30,13 @@ class FavoriteByRecyclerViewFragment : Fragment() {
     }
 
     private fun bindRecyclerView() {
-        movieAdapter = MovieListAdapter(){button,movie ->favoriteBtnOnClick(button, movie)}
-        binding.recyclerview.adapter = movieAdapter
+        movieAdapter = MovieListAdapter(requireContext())
+        binding.GridView.adapter = movieAdapter
         Repository.fixLikedList()
-        movieAdapter.submitList(Repository.likedMovieList)
+        movieAdapter.addList(Repository.likedMovieList)
     }
     private fun favoriteBtnOnClick(button: ImageButton, movie: Movie){
         button.setSelected(!(button.isSelected))
         movie.isLiked=button.isSelected
-        Repository.fixLikedList()
-        movieAdapter.submitList(Repository.likedMovieList)
-//        if (button.isSelected){
-//            button.isSelected = false
-//            movie.isLiked=false
-//        }
-//        else{
-//            button.isSelected = true
-//            movie.isLiked=true
-//        }
     }
 }

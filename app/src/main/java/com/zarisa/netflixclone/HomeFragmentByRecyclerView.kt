@@ -28,10 +28,10 @@ class HomeFragmentByRecyclerView : Fragment() {
     }
 
     private fun bindRecyclerView() {
-        val movieAdapter = MovieListAdapter(){button,movie ->favoriteBtnOnClick(button, movie)}
-        binding.recyclerview.adapter = movieAdapter
+        val movieAdapter = MovieListAdapter(requireContext())
+        binding.GridView.adapter = movieAdapter
         Repository.addTestDate()
-        movieAdapter.submitList(Repository.movieList)
+        movieAdapter.addList(Repository.movieList)
     }
     private fun favoriteBtnOnClick(button: ImageButton, movie:Movie){
         button.setSelected(!(button.isSelected))

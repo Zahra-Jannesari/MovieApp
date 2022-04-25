@@ -33,7 +33,7 @@
 
 
     <ImageButton
-        android:id="@+id/btn_fav"
+        android:id="@+id/btn_movieFav"
         android:layout_width="48dp"
         android:layout_height="48dp"
         android:src="@drawable/favorite_selector"
