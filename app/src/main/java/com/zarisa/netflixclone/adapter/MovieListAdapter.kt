@@ -13,8 +13,7 @@ import com.zarisa.netflixclone.databinding.MovieListItemBinding
 
 typealias like=((button: ImageButton, movie:Movie)->Unit)
 
-class MovieListAdapter ( val onItemClick:like):
-    ListAdapter<Movie, MovieListAdapter.MovieHolder>(MovieDiffCallback) {
+class MovieListAdapter (var movieList: MutableList<Movie> = mutableListOf()) : RecyclerView.Adapter<MovieListAdapter.MovieHolder>() {
     inner class MovieHolder(val binding: MovieListItemBinding) :
         RecyclerView.ViewHolder(binding.root) {
         fun bind(item: Movie) {
@@ -22,7 +21,7 @@ class MovieListAdapter ( val onItemClick:like):
                 binding.imageViewMovieImage.setImageResource(item.MovieImage)
                 binding.textViewMovieName.text=item.movieName
                 binding.btnMovieFav.isSelected=item.isLiked
-                binding.btnMovieFav.setOnClickListener { onItemClick(binding.btnMovieFav,item) }
+//                binding.btnMovieFav.setOnClickListener { onItemClick(binding.btnMovieFav,item) }
             } catch (e: Exception) {
                 e.printStackTrace()
             }
@@ -35,16 +34,16 @@ class MovieListAdapter ( val onItemClick:like):
     }
 
     override fun onBindViewHolder(holder: MovieListAdapter.MovieHolder, position: Int) {
-        val movie = getItem(position)
+        val movie = movieList[position]
         holder.bind(movie)
     }
-}
-object MovieDiffCallback : DiffUtil.ItemCallback<Movie>() {
-    override fun areItemsTheSame(oldItem: Movie, newItem: Movie): Boolean {
-        return oldItem == newItem
-    }
 
-    override fun areContentsTheSame(oldItem: Movie, newItem: Movie): Boolean {
-        return oldItem == newItem
+    override fun getItemCount(): Int {
+        return movieList.size
+    }
+    fun setDate(newList: List<Movie>){
+        movieList.clear()
+        movieList.addAll(newList)
+        notifyDataSetChanged()
     }
 }
