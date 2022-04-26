@@ -27,17 +27,17 @@ class FavoriteByRecyclerViewFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        bindRecyclerView()
+//        bindRecyclerView()
     }
 
-    private fun bindRecyclerView() {
-        movieAdapter = MovieListAdapter()
-        binding.GridView.adapter = movieAdapter
-        Repository.fixLikedList()
-        movieAdapter.setDate(Repository.likedMovieList)
-    }
-    private fun favoriteBtnOnClick(button: ImageButton, movie: Movie){
-        button.setSelected(!(button.isSelected))
-        movie.isLiked=button.isSelected
-    }
+//    private fun bindRecyclerView() {
+//        movieAdapter = MovieListAdapter()
+//        binding.GridView.adapter = movieAdapter
+//        Repository.fixLikedList()
+//        movieAdapter.setDate(Repository.likedMovieList)
+//    }
+//    private fun favoriteBtnOnClick(button: ImageButton, movie: Movie){
+//        button.setSelected(!(button.isSelected))
+//        movie.isLiked=button.isSelected
+//    }
 }

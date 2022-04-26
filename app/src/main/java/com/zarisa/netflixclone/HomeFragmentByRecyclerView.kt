@@ -6,6 +6,7 @@ import androidx.fragment.app.Fragment
 import android.widget.Button
 import android.widget.ImageButton
 import androidx.navigation.fragment.findNavController
+import com.zarisa.netflixclone.adapter.ImageListAdapter
 import com.zarisa.netflixclone.adapter.Movie
 import com.zarisa.netflixclone.adapter.MovieListAdapter
 import com.zarisa.netflixclone.adapter.Repository
@@ -18,7 +19,7 @@ class HomeFragmentByRecyclerView : Fragment() {
         savedInstanceState: Bundle?
     ): View {
         setHasOptionsMenu(true)
-        binding= FragmentHomeByRecyclerViewBinding.inflate(layoutInflater, container, false)
+        binding = FragmentHomeByRecyclerViewBinding.inflate(layoutInflater, container, false)
         return binding.root
     }
 
@@ -28,14 +29,18 @@ class HomeFragmentByRecyclerView : Fragment() {
     }
 
     private fun bindRecyclerView() {
-        val movieAdapter = MovieListAdapter()
-        binding.GridView.adapter = movieAdapter
+//        val movieAdapter = MovieListAdapter()
+//        binding.GridView.adapter = movieAdapter
+//        Repository.addTestDate()
+//        movieAdapter.setDate(Repository.movieList)
         Repository.addTestDate()
-        movieAdapter.setDate(Repository.movieList)
+        val adapter = ImageListAdapter(requireContext(), R.layout.movie_list_item, Repository.movieList)
+        binding.GridView.adapter = adapter
     }
-    private fun favoriteBtnOnClick(button: ImageButton, movie:Movie){
+
+    private fun favoriteBtnOnClick(button: ImageButton, movie: Movie) {
         button.setSelected(!(button.isSelected))
-        movie.isLiked=button.isSelected
+        movie.isLiked = button.isSelected
 //        if (button.isSelected){
 //            button.isSelected = false
 //            movie.isLiked=false
@@ -45,14 +50,15 @@ class HomeFragmentByRecyclerView : Fragment() {
 //            movie.isLiked=true
 //        }
     }
+
     override fun onCreateOptionsMenu(menu: Menu, inflater: MenuInflater) {
-        inflater.inflate(R.menu.option_menu,menu)
+        inflater.inflate(R.menu.option_menu, menu)
         super.onCreateOptionsMenu(menu, inflater)
     }
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
-        when(item.itemId){
-            R.id.btn_favorite->findNavController().navigate(R.id.action_homeFragmentByRecyclerView_to_favoriteByRecyclerViewFragment)
+        when (item.itemId) {
+            R.id.btn_favorite -> findNavController().navigate(R.id.action_homeFragmentByRecyclerView_to_favoriteByRecyclerViewFragment)
         }
         return super.onOptionsItemSelected(item)
     }
